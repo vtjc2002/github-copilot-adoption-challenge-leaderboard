@@ -1,3 +1,6 @@
+# Seed the Activities table in the leaderboard database with default scoring data.
+# table creation is handled via EF Core migrations during app startup.
+
 param()
 
 $ErrorActionPreference = 'Stop'

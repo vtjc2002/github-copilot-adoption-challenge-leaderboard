@@ -1,3 +1,5 @@
+# add web app managed identity roles to sql db and restart web app to pick up changes
+
 param()
 
 $ErrorActionPreference = 'Stop'

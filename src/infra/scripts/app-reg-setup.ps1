@@ -1,3 +1,6 @@
+# App Registration setup script for Leaderboard App
+# Creates an App Registration in Azure AD and updates the Web App configuration settings
+
 param(
 	[Parameter(Mandatory = $false)]
 	[ValidateRange(1, 365)]
