@@ -34,7 +34,6 @@ function Get-AzdEnvValue {
 }
 
 $SqlServerFqdn = Get-AzdEnvValue -Name 'SQL_SERVER_FQDN'
-$AppIdentity = Get-AzdEnvValue -Name 'WEB_APP_NAME'
 
 $sqlAccessToken = (& az account get-access-token --resource https://database.windows.net --query accessToken -o tsv 2>$null)
 if ($LASTEXITCODE -ne 0) {
@@ -47,45 +46,26 @@ if ([string]::IsNullOrWhiteSpace($token)) {
 }
 
 $connectionString = "Server=tcp:$SqlServerFqdn,1433;Database=leaderboarddb;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
-$escapedPrincipal = $AppIdentity.Replace("'", "''")
-
-# Ensure the managed identity exists in the database and holds required roles.
 $query = @"
-DECLARE @principal sysname = N'$escapedPrincipal';
-DECLARE @principalQuoted nvarchar(260) = QUOTENAME(@principal);
+SET IDENTITY_INSERT Activities ON;
 
-IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = @principal)
-  EXEC(N'CREATE USER ' + @principalQuoted + N' FROM EXTERNAL PROVIDER;');
+INSERT INTO Activities (ActivityId, Name, WeightType, Weight, Scope, Frequency) VALUES
+(1, 'ActiveUsersPerDay', 'Multiplier', 50.00, 'User', 'Daily'),
+(2, 'EngagedUsersPerDay', 'Multiplier', 75.00, 'User', 'Daily'),
+(3, 'TotalCodeSuggestions', 'Multiplier', 1.00, 'Team', 'Daily'),
+(4, 'TotalLinesAccepted', 'Multiplier', 1.50, 'Team', 'Daily'),
+(5, 'TotalChats', 'Multiplier', 10.00, 'Team', 'Daily'),
+(6, 'TotalChatInsertions', 'Multiplier', 50.00, 'Team', 'Daily'),
+(7, 'TotalChatCopyEvents', 'Multiplier', 30.00, 'Team', 'Daily'),
+(8, 'TotalPRSummariesCreated', 'Multiplier', 100.00, 'Team', 'Daily'),
+(9, 'TotalDotComChats', 'Multiplier', 20.00, 'Team', 'Daily'),
+(10, 'CompletedLearningModule', 'Fixed', 250.00, 'User', 'Once'),
+(11, 'GitHubCopilotCertificationExam', 'Fixed', 1000.00, 'User', 'Once'),
+(12, 'CopilotDailyChallengeCompleted', 'Fixed', 200.00, 'User', 'Daily'),
+(13, 'LinkClicked', 'Fixed', 50.00, 'User', 'Once'),
+(14, 'TeamBonus', 'Fixed', 50.00, 'Team', 'Once');
 
-IF NOT EXISTS (
-  SELECT 1
-  FROM sys.database_role_members rm
-  JOIN sys.database_principals rp ON rm.role_principal_id = rp.principal_id
-  JOIN sys.database_principals up ON rm.member_principal_id = up.principal_id
-  WHERE rp.name = 'db_datareader'
-    AND up.name = @principal
-)
-  EXEC(N'ALTER ROLE db_datareader ADD MEMBER ' + @principalQuoted + N';');
-
-IF NOT EXISTS (
-  SELECT 1
-  FROM sys.database_role_members rm
-  JOIN sys.database_principals rp ON rm.role_principal_id = rp.principal_id
-  JOIN sys.database_principals up ON rm.member_principal_id = up.principal_id
-  WHERE rp.name = 'db_datawriter'
-    AND up.name = @principal
-)
-  EXEC(N'ALTER ROLE db_datawriter ADD MEMBER ' + @principalQuoted + N';');
-
-IF NOT EXISTS (
-  SELECT 1
-  FROM sys.database_role_members rm
-  JOIN sys.database_principals rp ON rm.role_principal_id = rp.principal_id
-  JOIN sys.database_principals up ON rm.member_principal_id = up.principal_id
-  WHERE rp.name = 'db_ddladmin'
-    AND up.name = @principal
-)
-  EXEC(N'ALTER ROLE db_ddladmin ADD MEMBER ' + @principalQuoted + N';');
+SET IDENTITY_INSERT Activities OFF;
 "@
 
 $connection = $null
@@ -115,4 +95,4 @@ finally {
   }
 }
 
-Write-Host "Managed identity '$AppIdentity' ensured with required database roles."
+Write-Host 'Activities table seeded with default scoring data.'

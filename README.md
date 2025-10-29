@@ -118,12 +118,14 @@ How to Evaluate & Examples:
 Deploy the entire application with a single command using Azure Developer CLI:
 
 ```bash
-## set the necessary environment variables first
-pwsh ./setup-azd.ps1
+## set the necessary environment variables first.  Make sure to replace the placeholders with your actual values.
+pwsh ./setup-azd.ps1 -TenantId <tenant-id> -SubscriptionId <subscription-id> -Location <azure-region> -EnvironmentName <env-name>
 ## run azd up
 azd up
 ## execute sql script to grant web app the db roles
 pwsh ./src/infra/scripts/grant-sql-managed-identity-roles.ps1 
+## execute sql script to add seed data
+pwsh ./src/infra/scripts/seed-database.ps1
 ```
 
 This will provision all Azure infrastructure (App Service, SQL Database, VNet, Key Vault) and deploy your application in one step.

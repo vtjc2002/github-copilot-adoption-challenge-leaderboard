@@ -2,10 +2,11 @@
 # This script helps set up the environment and provision infrastructure
 
 param(
-    [string]$SubscriptionId="f552db8b-0cab-47e2-9bc2-6ab54582600a",
+    [string]$TenantId,
+    [string]$SubscriptionId,
     [string]$Location = "eastus2",
-    [string]$EnvironmentName = "jtdev1",
-    [string]$TenantId="16b3c013-d300-468d-ac64-7eda0820b6d3"
+    [string]$EnvironmentName = "lbapp"
+    
 )
 
 Write-Host "🚀 Setting up Azure Developer CLI for Leaderboard App" -ForegroundColor Green
