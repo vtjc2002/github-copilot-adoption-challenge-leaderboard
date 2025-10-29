@@ -1,25 +1,6 @@
-﻿# GitHub Copilot Adoption Challenge Leaderboard App
+﻿# Technical Overview
 
-## Overview
-The **GitHub Copilot Adoption Challenge Leaderboard App** is a web application that tracks and manages scores for individual participants and teams during the GitHub Copilot Adoption Challenge. The application rewards teams (and individuals) with points for completing activities including use of GitHub Copilot tools such as code completion and Copilot Chat.
 
-The app periodically updates the leaderboard based on accumulated points so that both individual contributions and team performance are reflected accurately. It is a monolithic ASP.NET application (frontend + backend) targeting .NET 8 and uses Azure SQL for persistence. This document assumes deployment to **Azure App Service**.
-
----
-## Key Features
-- **Leaderboard Homepage**: Displays team standings, scores, and announcements.
-- **User Authentication**: Login, passcode generation / validation, token refresh, and logout.
-- **Participant Management**: CRUD operations for participants.
-- **Participant Scores Management**: Retrieve and create participant scores based on weighted activities; automatically updates leaderboard.
-- **Survey Participation & Submission**: Authenticated users submit survey responses; validated and stored.
-- **User-Driven Team Creation**: Users can create teams (name, tagline, icon) prior to challenge start.
-- **Team Management & Locking**: Users may select a team until the challenge starts; teams lock afterward.
-- **Announcements**: Admin-posted announcements and links (optionally point-bearing activities).
-- **Admin Team Management**: Full CRUD for teams.
-- **Team Metrics Management**: Daily summaries of team metrics can be ingested and reflected in scores.
-- **User Profile Management**: Users view/update their profile and team assignment (subject to challenge status).
-
----
 ## Architecture (Conceptual)
 A simplified architecture consists of:
 1. Azure App Service (Web App) hosting the .NET 8 application.

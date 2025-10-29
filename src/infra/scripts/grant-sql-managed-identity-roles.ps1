@@ -35,10 +35,12 @@ function Get-AzdEnvValue {
   return $trimmed
 }
 
+# Retrieve necessary environment values.
 $SqlServerFqdn = Get-AzdEnvValue -Name 'SQL_SERVER_FQDN'
 $AppIdentity = Get-AzdEnvValue -Name 'WEB_APP_NAME'
 $ResourceGroupName = Get-AzdEnvValue -Name 'RESOURCE_GROUP_NAME'
 
+# Acquire an access token for Azure SQL Database using the az CLI.
 $sqlAccessToken = (& az account get-access-token --resource https://database.windows.net --query accessToken -o tsv 2>$null)
 if ($LASTEXITCODE -ne 0) {
   throw 'Unable to acquire SQL access token via az CLI. Run "az login" and retry.'
