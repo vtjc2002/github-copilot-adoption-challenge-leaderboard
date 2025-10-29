@@ -114,7 +114,6 @@ Write-Host "✅ Setup completed!" -ForegroundColor Green
 Write-Host ""
 Write-Host "Next steps:" -ForegroundColor Cyan
 Write-Host "1. Review the preview above" -ForegroundColor White
-Write-Host "2. If everything looks good, run: azd provision" -ForegroundColor White
-Write-Host "3. After provisioning, deploy your app: azd deploy" -ForegroundColor White
+Write-Host "2. If everything looks good, run: azd up" -ForegroundColor White
 Write-Host ""
 Write-Host "For more information, see DEPLOYMENT.md" -ForegroundColor Gray

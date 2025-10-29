@@ -35,6 +35,7 @@ function Get-AzdEnvValue {
 
 $SqlServerFqdn = Get-AzdEnvValue -Name 'SQL_SERVER_FQDN'
 $AppIdentity = Get-AzdEnvValue -Name 'WEB_APP_NAME'
+$ResourceGroupName = Get-AzdEnvValue -Name 'RESOURCE_GROUP_NAME'
 
 $sqlAccessToken = (& az account get-access-token --resource https://database.windows.net --query accessToken -o tsv 2>$null)
 if ($LASTEXITCODE -ne 0) {
@@ -116,3 +117,10 @@ finally {
 }
 
 Write-Host "Managed identity '$AppIdentity' ensured with required database roles."
+
+Write-Host "🌐 Restart Web app..and sleep for 30 seconds to let changes take effect."
+az webapp restart --name $AppIdentity --resource-group $ResourceGroupName
+
+sleep 30
+Write-Host "✅ Done."
+
