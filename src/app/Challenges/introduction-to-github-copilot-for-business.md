@@ -1,0 +1,5 @@
+﻿---
+Title: Introduction to GitHub Copilot for Business
+Source: insert.sql
+---
+<!-- Summary --> <p style="font-size: 1.1rem; color: #333;"> Learn about the difference between GitHub Copilot Business versus GitHub Copilot Individuals. Also learn about specific use cases and customer stories for GitHub Copilot Business as well as how to enable it. </p> <!-- Learning Objectives --> <h5 class="mt-4" style="font-weight: 600;">Learning objectives</h5> <p>At the end of this module, you'll be able to:</p> <ul style="font-size: 1rem; line-height: 1.6;"> <li>Understand the difference between GitHub Copilot Business versus GitHub Copilot Individuals.</li> <li>Learn about specific use cases for GitHub Copilot Business and hear how customers are enhancing their productivity.</li> <li>Review how to enable GitHub Copilot Business.</li> </ul> <!-- CTA Button --> <div class="mt-4"> <a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot-for-business/" target="_blank" class="btn btn-primary"> Go to Learning Module </a> </div>

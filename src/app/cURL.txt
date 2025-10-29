@@ -1,0 +1,8 @@
+﻿Login flow Testing Steps
+-----------
+Step1: curl -X POST "https://localhost:32823/api/Auth/SendEmailPasscode" -H "Content-Type: application/json" -d "{\"email\": \"suhasaraos@gmail.com\"}"
+Step2: Get the passcode from email or DB
+Step3: curl -X POST "https://localhost:32823/api/Auth/login" -H "accept: */*" -H "Content-Type: application/json" -d "{\"email\": \"xxx@gmail.com\", \"passcode\": \"yyy\"}"
+Step4: curl -X POST "https://localhost:32823/api/Auth/logout" -H "Authorization: Bearer yourtoken"
+
+

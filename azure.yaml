@@ -1,0 +1,26 @@
+# Azure Developer CLI configuration file
+# https://aka.ms/azure-dev-docs
+
+name: leaderboardapp
+metadata:
+  template: leaderboardapp@0.0.1-beta
+
+workflow:
+  up:
+    steps:
+      - azd: provision
+      - azd: deploy
+
+services:
+  web:
+    project: ./src/app
+    language: dotnet
+    host: appservice
+    
+infra:
+  provider: bicep
+  path: ./src/infra
+
+# Pipeline configuration (optional)
+pipeline:
+  provider: github

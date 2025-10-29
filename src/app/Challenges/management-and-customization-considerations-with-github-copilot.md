@@ -1,0 +1,5 @@
+﻿---
+Title: Management and Customization Considerations with GitHub Copilot
+Source: insert.sql
+---
+<!-- Summary --> <p style="font-size: 1.1rem; color: #333;"> In this module, we explore management and customization considerations with GitHub Copilot. </p> <!-- Learning Objectives --> <h5 class="mt-4" style="font-weight: 600;">Learning objectives</h5> <p>By the end of this module, you'll:</p> <ul style="font-size: 1rem; line-height: 1.6;"> <li>Understand the GitHub Copilot plans and their associated management and customization features.</li> <li>Gain insight into the contractual protections in GitHub Copilot and disabling matching public code.</li> <li>Know how to manage content exclusions.</li> <li>Recognize common problems with GitHub Copilot and their solutions.</li> </ul> <!-- CTA Button --> <div class="mt-4"> <a href="https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/" target="_blank" class="btn btn-primary"> Go to Learning Module </a> </div>
