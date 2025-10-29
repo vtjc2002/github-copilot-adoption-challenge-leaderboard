@@ -93,6 +93,8 @@ pwsh ./src/infra/scripts/app-reg-setup.ps1 -passwordDaysToExpiration <number of 
 
 This will provision all Azure infrastructure (App Service, SQL Database, VNet, Key Vault) and deploy your application in one step.
 
+_the script adds the ip address of your current machine to the sql server firewall rules so that the sql scripts can be executed successfully.  It also adds the ip address to the web app firewall rules.  Make sure to update your firewall rules accordingly after the deployment/setup._
+
 Use below command to get the web app URL after deployment:
 ```bash
 azd env get-value APP_SERVICE_HOST
