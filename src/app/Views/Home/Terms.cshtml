@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Terms of Use";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5 mb-5">
+    <h2 class="mb-4">Terms of Use</h2>
+
+    <p>
+        This GitHub Copilot Challenge Leaderboard application (the "App") is provided to you solely for the limited purpose of running an internal, time‑bound enablement / adoption challenge. <strong>This App is not a Microsoft product</strong>; Microsoft has provided compiled binaries and sample deployment guidance for your optional internal use. It is not open source, is intended strictly for <strong>non‑production</strong> scenarios, and carries <strong>no standard Microsoft support, SLA, warranty, or commitment to maintain</strong>. Use is at your discretion and risk.
+    </p>
+
+    <p>
+        By accessing or using the App, you acknowledge and agree to these Terms. If you do not agree, do not deploy or use the App. Where these Terms reference Microsoft, such references relate only to the limited enablement context in which the App was shared.
+    </p>
+
+    <h4 class="mt-4">1. Permitted Use</h4>
+    <p>
+        You may deploy and use the App internally during the designated challenge window to:
+    </p>
+    <ul>
+        <li>Create and manage teams and participants</li>
+        <li>Record and display challenge activities and scores</li>
+        <li>View aggregated metrics relevant to challenge progress</li>
+    </ul>
+    <p>
+        You must not (a) use the App in production, (b) offer it as a service, (c) use it to process regulated, sensitive, or mission‑critical data, or (d) circumvent any technical limitations. After the challenge ends, you are responsible for removing / deleting the deployment, binaries, and associated data per your policies.
+    </p>
+
+    <h4 class="mt-4">2. Non-Production / Limited Lifetime</h4>
+    <p>
+        The App is intended only for short‑term, non‑production use tied to the challenge duration. It should not be integrated into production workflows or long‑term enterprise processes. No lifecycle management (patching, security updates, feature roadmap) is provided by Microsoft.
+    </p>
+
+    <h4 class="mt-4">3. Support Channel (Limited)</h4>
+    <p>
+        No standard Microsoft support channels (Premier / Unified Support, Azure Support tickets, or commercial support SLAs) apply. Any optional assistance is limited to the same Microsoft contact / program team that provided the App and only for the active duration of the challenge. After the challenge concludes, no further assistance should be expected.
+    </p>
+
+    <h4 class="mt-4">4. Intellectual Property</h4>
+    <p>
+        All content, trademarks, and intellectual property embodied in the App remain the property of Microsoft or their respective owners. You receive no license beyond the internal, time‑bound usage described. Do not redistribute, sublicense, decompile, or reverse engineer except where permitted by applicable law.
+    </p>
+
+    <h4 class="mt-4">5. Feedback</h4>
+    <p>
+        If you voluntarily provide feedback, suggestions, or usage insights related to the App, you grant Microsoft a perpetual, irrevocable, royalty‑free right to use, adapt, and incorporate that feedback without obligation to you.
+    </p>
+
+    <h4 class="mt-4">6. Data & Privacy Overview</h4>
+    <p>
+        The App runs entirely within your Azure environment (or other hosting you configure). <strong>Microsoft does not collect, receive, or transmit any data from the running instance</strong> unless you separately and voluntarily share feedback or metrics outside of the App. Your deployment configuration, network isolation, access controls, and data retention policies govern privacy outcomes.
+        For any data you may intentionally share with Microsoft (e.g., optional feedback), Microsoft’s handling of that shared data is subject to the <a href="https://privacy.microsoft.com" target="_blank">Microsoft Privacy Statement</a>.
+    </p>   
+
+    <h4 class="mt-4">8. Limitation of Liability</h4>
+    <p>
+        THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND (EXPRESS, IMPLIED, OR STATUTORY), INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON‑INFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, MICROSOFT SHALL NOT BE LIABLE FOR ANY INDIRECT, CONSEQUENTIAL, SPECIAL, INCIDENTAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR LOST PROFITS, REVENUES, DATA, OR GOODWILL, ARISING OUT OF OR RELATING TO THE APP OR THESE TERMS, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ALL EVENTS MICROSOFT’S AGGREGATE LIABILITY RELATING TO THE APP SHALL NOT EXCEED ONE U.S. DOLLAR (US$1.00).
+    </p>
+
+    <h4 class="mt-4">9. Changes to Terms / Discontinuation</h4>
+    <p>
+        Microsoft may update these Terms or discontinue providing the App (including any guidance or binaries) at any time. Continued internal use after an update constitutes acceptance. You should periodically review this page for changes.
+    </p>
+
+    <h4 class="mt-4">10. Export / Legal Compliance</h4>
+    <p>
+        You are responsible for complying with all applicable laws, including export, data protection, and sanctions regulations, in connection with deploying and using the App.
+    </p>
+
+    <h4 class="mt-4">11. Termination</h4>
+    <p>
+        Your right to use the App ends automatically at the earlier of (a) challenge conclusion or (b) Microsoft’s notice of discontinuation. Upon termination you must delete the App and related data (unless retention is otherwise required by your policies or law).
+    </p>
+
+    <h4 class="mt-4">12. Contact (Limited Scope)</h4>
+    <p>
+        For questions during the active challenge only, contact your Microsoft program representative or enablement lead: <strong>@(ViewData["SupportEmail"] ?? "[Insert internal support email]")</strong>. Do not open standard Microsoft support tickets for this App.
+    </p>   
+</div>

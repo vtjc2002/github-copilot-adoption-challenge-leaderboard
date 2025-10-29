@@ -1,61 +1,12 @@
 <!--=========================README TEMPLATE INSTRUCTIONS=============================
-===========================**Post-deployment configuration required (one-time, ~15 minutes):**
-1. **SQL Database Permissions**: Grant the App Service managed identity database access via Azure Portal (~5 min)
-2. **Azure AD Authentication**: Create an App Registration and configure ClientId/TenantId/ClientSecret (~10 min)
-
-📋 **Configuration Checklist**: See [CONFIGURATION-CHECKLIST.md](./CONFIGURATION-CHECKLIST.md) for complete requirements validation
-
-📖 **Detailed Step-by-Step Guide**: See [DEPLOYMENT.md](./DEPLOYMENT.md) for comprehensive instructions
-
-🔧 **Troubleshooting**: See [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for common errors and solutions
-
-**Alternative deployment options:**
-- **Step-by-step**: Use `azd provision` then `azd deploy` for more control=================================================
-
-- THIS README TEMPLATE LARGELY CONSISTS OF COMMENTED OUT TEXT. THIS UNRENDERED TEXT IS MEANT TO BE LEFT IN AS A GUIDE 
-  THROUGHOUT THE REPOSITORY'S LIFE WHILE END USERS ONLY SEE THE RENDERED PAGE CONTENT. 
-- Any italicized text rendered in the initial template is intended to be replaced IMMEDIATELY upon repository creation.
-
-- This template is default but not mandatory. It was designed to compensate for typical gaps in Microsoft READMEs 
-  that slow the pace of work. You may delete it if you have a fully populated README to replace it with.
-
-- Most README sections below are commented out as they are not known early in a repository's life. Others are commented 
-  out as they do not apply to every repository. If a section will be appropriate later but not known now, consider 
-  leaving it in commented out and adding an issue as a reminder.
-- There are additional optional README sections in the external instruction link below. These include; "citation",  
-  "built with", "acknowledgments", "folder structure", etc.
-- You can easily find the places to add content that will be rendered to the end user by searching 
-within the file for "TODO".
-
-
 
 - ADDITIONAL EXTERNAL TEMPLATE INSTRUCTIONS:
   -  https://aka.ms/StartRight/README-Template/Instructions
 
-======================================================================================
-====================================================================================-->
+==================================================================================-->
 
 
 <!---------------------[  Description  ]------------------<recommended> section below------------------>
-
-# csu-github-copilot-adoption-challenge
-
-<!-- 
-INSTRUCTIONS:
-- Write description paragraph(s) that can stand alone. Remember 1st paragraph may be consumed by aggregators to improve 
-  search experience.
-- You description should allow any reader to figure out:
-    1. What it does?
-    2. Why was it was created?
-    3. Who created?
-    4. What is it's maturity?
-    5. What is the larger context?
-- Write for a reasonable person with zero context regarding your product, org, and team. The person may be evaluating if 
-this is something they can use.
-
-How to Evaluate & Examples: 
-  - https://aka.ms/StartRight/README-Template/Instructions#description
--->
 
 # LeaderboardApp - GitHub Copilot Adoption Challenge
 ## Overview
@@ -75,28 +26,6 @@ The app is structured to provide real-time updates to the leaderboard, ensuring 
 📋 **[Security and Privacy Statement](./PRIVACY-STATEMENT.md)** - Please review the official Microsoft security and privacy statement before deploying this application.
 
 -----------------------------------------------------------------
-<!-----------------------[  License  ]----------------------<optional> section below--------------------->
-
-<!-- 
-## License 
---> 
-
-<!-- 
-INSTRUCTIONS:
-- Licensing is mostly irrelevant within the company for purely internal code. Use this section to prevent potential 
-  confusion around:
-  - Open source in internal code repository.
-  - Multiple licensed code in same repository. 
-  - Internal fork of public open source code.
-
-How to Evaluate & Examples:
-  - https://aka.ms/StartRight/README-Template/Instructions#license
--->
-
-<!---- [TODO]  CONTENT GOES BELOW ------->
-
-<!------====-- CONTENT GOES ABOVE ------->
-
 
 
 <!-----------------------[  Getting Started  ]--------------<recommended> section below------------------>
@@ -118,8 +47,17 @@ How to Evaluate & Examples:
 Deploy the entire application with a single command using Azure Developer CLI:
 
 ```bash
-azd auth login
+## set the necessary environment variables first.  Make sure to replace the placeholders with your actual values.
+pwsh ./setup-azd.ps1 -TenantId <tenant-id> -SubscriptionId <subscription-id> -Location <azure-region> -EnvironmentName <env-name>
+## run azd up
 azd up
+## execute sql script to grant web app the db roles
+pwsh ./src/infra/scripts/grant-sql-managed-identity-roles.ps1 
+## execute sql script to add seed data
+pwsh ./src/infra/scripts/seed-database.ps1
+## create app registration name LeaderboardApp-<env-name> in azure and update web app settings
+pwsh ./src/infra/scripts/app-reg-setup.ps1 -passwordDaysToExpiration <number of days before password expires>
+
 ```
 
 This will provision all Azure infrastructure (App Service, SQL Database, VNet, Key Vault) and deploy your application in one step.
