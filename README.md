@@ -40,39 +40,6 @@ How to Evaluate & Examples:
   - https://aka.ms/StartRight/README-Template/Instructions#getting-started
 -->
 
-⚠️ **Before You Begin**: Please read the [Security and Privacy Statement](./PRIVACY-STATEMENT.md) before deploying this application.
-
-### Quick Deployment to Azure
-
-Deploy the entire application with a single command using Azure Developer CLI:
-
-```bash
-## set the necessary environment variables first.  Make sure to replace the placeholders with your actual values.
-pwsh ./setup-azd.ps1 -TenantId <tenant-id> -SubscriptionId <subscription-id> -Location <azure-region> -EnvironmentName <env-name>
-## run azd up
-azd up
-## execute sql script to grant web app the db roles
-pwsh ./src/infra/scripts/grant-sql-managed-identity-roles.ps1 
-## execute sql script to add seed data
-pwsh ./src/infra/scripts/seed-database.ps1
-## create app registration name LeaderboardApp-<env-name> in azure and update web app settings
-pwsh ./src/infra/scripts/app-reg-setup.ps1 -passwordDaysToExpiration <number of days before password expires>
-
-```
-
-This will provision all Azure infrastructure (App Service, SQL Database, VNet, Key Vault) and deploy your application in one step.
-
-**Post-deployment configuration required (one-time, ~15 minutes):**
-1. **SQL Database Permissions**: Grant the App Service managed identity database access via Azure Portal (~5 min)
-2. **Azure AD Authentication**: Create an App Registration and configure ClientId/TenantId/ClientSecret (~10 min)
-
-� **Configuration Checklist**: See [CONFIGURATION-CHECKLIST.md](./CONFIGURATION-CHECKLIST.md) for complete requirements validation
-
-📖 **Detailed Step-by-Step Guide**: See [DEPLOYMENT.md](./DEPLOYMENT.md) for comprehensive instructions
-
-**Alternative deployment options:**
-- **Step-by-step**: Use `azd provision` then `azd deploy` for more control
-- **Local development**: Use Docker and PostgreSQL (see prerequisites below)
 
 <!-----------------------[ Prerequisites  ]-----------------<optional> section below--------------------->
 ### Prerequisites
@@ -86,13 +53,18 @@ How to Evaluate & Examples:
 ---------------------------------------------------------->
 
 <!---- [TODO]  CONTENT GOES BELOW ------->
+1. Install Azure Developer CLI (azd): https://aka.ms/azd-install
+1. Install Azure CLI: https://aka.ms/azcli-install  
+1. Have an Azure subscription
+
+For local development, you will also need:
 * [Docker or orchestration engine like Kubernetes to run the LeaderboardApp container](https://www.docker.com/)
 * [PostgresSQL running as a container](https://hub.docker.com/_/postgres)
 <!------====-- CONTENT GOES ABOVE ------->
 
 
 <!-----------------------[  Installing  ]-------------------<optional> section below------------------>
-### Installing
+### Installing - Quick Deployment to Azure
 
 <!--
 INSTRUCTIONS:
@@ -103,35 +75,79 @@ How to Evaluate & Examples:
   - https://aka.ms/StartRight/README-Template/Instructions#installing
 
 <!---- [TODO]  CONTENT GOES BELOW ------->
-This repository does not hold installable content.
-<!------====-- CONTENT GOES ABOVE ------->
+Deploy the entire application with a single command using Azure Developer CLI:
 
-
-<!-----------------------[  Tests  ]------------------------<optional> section below--------------------->
-<!-- 
-## Tests
- -->
-
-<!--
-INSTRUCTIONS:
-- Explain how to run the tests for this project. You may want to link here from Deployment (CI/CD) or Contributing sections.
-
-How to Evaluate & Examples:
-  - https://aka.ms/StartRight/README-Template/Instructions#tests
--->
-
-<!---- [TODO]  CONTENT GOES BELOW ------->
-<!--
-
-*Explain what these tests test and why* 
+```bash
+## set the necessary environment variables first.  Make sure to replace the placeholders with your actual values.
+pwsh ./setup-azd.ps1 -TenantId <tenant-id> -SubscriptionId <subscription-id> -Location <azure-region> -EnvironmentName <env-name>
+## run azd up to deploy the infra and app
+azd up
+## execute sql script to grant web app the db roles
+pwsh ./src/infra/scripts/grant-sql-managed-identity-roles.ps1 
+## execute sql script to add seed data
+pwsh ./src/infra/scripts/seed-database.ps1
+## create app registration name LeaderboardApp-<env-name> in azure and update web app settings
+pwsh ./src/infra/scripts/app-reg-setup.ps1 -passwordDaysToExpiration <number of days before password expires>
 
 ```
-Give an example
-``` 
 
--->
+This will provision all Azure infrastructure (App Service, SQL Database, VNet, Key Vault) and deploy your application in one step.
+
+Use below command to get the web app URL after deployment:
+```bash
+azd env get-value APP_SERVICE_HOST
+```
+
+💻**Technical Overview**: See [TechnicalOverview.md](./TechnicalOverview.md) for architecture and component details.  Also app configuration settings.
+
+📖 **Detailed Step-by-Step Guide**: See [DEPLOYMENT.md](./DEPLOYMENT.md) for comprehensive instructions as well as optional features such as SMTP email or GitHub connection.  Troubleshooting tips are also included.  Note that the deployment scripts above does all the non-optional steps for you already when you deploy.
+
+
+
+**Alternative deployment options:**
+- **Step-by-step**: Use `azd provision` then `azd deploy` for more control
+- **Local development**: Use Docker and PostgreSQL (see prerequisites section)
 <!------====-- CONTENT GOES ABOVE ------->
 
+### Understanding the Scoring System
+
+The Activities table defines how different GitHub Copilot activities contribute to team scores:
+
+**Weight Types:**
+- **Multiplier**: Score = Activity count × Weight (e.g., 10 chats × 10.00 = 100 points)
+- **Fixed**: Score = Weight regardless of count (e.g., completing certification = 1000 points)
+
+**Scopes:**
+- **User**: Individual participant activity
+- **Team**: Aggregated team activity
+
+**Frequencies:**
+- **Daily**: Activity tracked and scored every day
+- **Once**: One-time achievement (e.g., certifications)
+
+**Default Weights (Customizable):**
+
+| Activity | Weight | Type | Why It Matters |
+|----------|--------|------|----------------|
+| ActiveUsersPerDay | 50.00 | Multiplier | Encourages daily engagement |
+| EngagedUsersPerDay | 75.00 | Multiplier | Rewards active participation |
+| TotalCodeSuggestions | 1.00 | Multiplier | Tracks basic usage |
+| TotalLinesAccepted | 1.50 | Multiplier | Rewards accepting suggestions |
+| TotalChats | 10.00 | Multiplier | Encourages using Chat features |
+| TotalChatInsertions | 50.00 | Multiplier | Rewards code insertions from Chat |
+| TotalChatCopyEvents | 30.00 | Multiplier | Tracks code copying from Chat |
+| TotalPRSummariesCreated | 100.00 | Multiplier | Encourages PR documentation |
+| TotalDotComChats | 20.00 | Multiplier | Rewards using GitHub.com Chat |
+| CompletedLearningModule | 250.00 | Fixed | Recognizes training completion |
+| GitHubCopilotCertificationExam | 1000.00 | Fixed | Highest reward for certification |
+| CopilotDailyChallengeCompleted | 200.00 | Fixed | Daily challenge incentive |
+| LinkClicked | 50.00 | Fixed | Engagement tracking |
+| TeamBonus | 50.00 | Fixed | Team collaboration bonus |
+
+> **💡 Customization Tip:** You can adjust these weights based on what's most important to your organization. For example:
+> - Increase `GitHubCopilotCertificationExam` to 2000 to emphasize certification
+> - Increase `TotalPRSummariesCreated` to encourage better documentation
+> - Adjust `TotalChats` vs `TotalCodeSuggestions` to prioritize different features
 
 <!-----------------------[  Deployment (CI/CD)  ]-----------<optional> section below--------------------->
 ### Deployment (CI/CD)
@@ -149,7 +165,7 @@ How to Evaluate & Examples:
 -->
 
 <!---- [TODO]  CONTENT GOES BELOW ------->
-_At this time, the repository does not use continuous integration or produce a website, artifact, or anything deployed._
+_At this time, the repository does not use continuous integration. Use `azd up` for deployment._
 <!------====-- CONTENT GOES ABOVE ------->
 
 
@@ -173,26 +189,6 @@ How to Evaluate & Examples:
 
 -----------------------------------------------
 
-<!-----------------------[  Access  ]-----------------------<recommended> section below------------------>
-## Access
-
-<!-- 
-INSTRUCTIONS:
-- Please use this section to reduce the all-too-common friction & pain of getting read access and role-based permissions 
-  to repos inside Microsoft. Please cover (a) Gaining a role with read, write, other permissions. (b) sharing a link to 
-  this repository such that people who are not members of the organization can access it.
-- If the repository is set to internalVisibility, you may also want to refer to the "Sharing a Link to this Repository" sub-section 
-of the [README-Template instructions](https://aka.ms/StartRight/README-Template/Instructions#sharing-a-link-to-this-repository) so new GitHub EMU users know to get 1ES-Enterprise-Visibility MyAccess group access and therefore will have read rights to any repo set to internalVisibility.
-
-How to Evaluate & Examples:
-  - https://aka.ms/StartRight/README-Template/Instructions#how-to-share-an-accessible-link-to-this-repository
--->
-
-
-<!---- [TODO]  CONTENT GOES BELOW ------->
-
-<!------====-- CONTENT GOES ABOVE ------->
-
 
 <!-----------------------[  Contributing  ]-----------------<recommended> section below------------------>
 ## Contributing
@@ -214,58 +210,14 @@ How to Evaluate & Examples:
 _This repository prefers outside contributors start forks rather than branches. For pull requests more complicated 
 than typos, it is often best to submit an issue first._
 
-If you are a new potential collaborator who finds reaching out or contributing to another project awkward, you may find 
-it useful to read these [tips & tricks](https://aka.ms/StartRight/README-Template/innerSource/2021_02_TipsAndTricksForCollaboration) 
-on InnerSource Communication.
-<!------====-- CONTENT GOES ABOVE ------->
-
-
-<!-----------------------[  Contacts  ]---------------------<recommended> section below------------------>
-<!-- 
-#### Contacts  
--->
-<!--
-INSTRUCTIONS: 
-- To lower friction for new users and contributors, provide a preferred contact(s) and method (email, TEAMS, issue, etc.)
-
-How to Evaluate & Examples:
-  - https://aka.ms/StartRight/README-Template/Instructions#contacts
--->
-
-<!---- [TODO]  CONTENT GOES BELOW ------->
-
-<!------====-- CONTENT GOES ABOVE ------->
-
-
-<!-----------------------[  Support & Reuse Expectations  ]-----<recommended> section below-------------->
- 
-### Support & Reuse Expectations
-
- 
-<!-- 
-INSTRUCTIONS:
-- To avoid misalignments use this section to set expectations in regards to current and future state of:
-  - The level of support the owning team provides new users/contributors and 
-  - The owning team's expectations in terms of incoming InnerSource requests and contributions.
-
-How to Evaluate & Examples:
-  - https://aka.ms/StartRight/README-Template/Instructions#support-and-reuse-expectations
--->
-
-<!---- [TODO]  CONTENT GOES BELOW ------->
-
-_The creators of this repository **DO NOT EXPECT REUSE**._
-
-If you do use it, please let us know via an email or 
-leave a note in an issue, so we can best understand the value of this repository.
 <!------====-- CONTENT GOES ABOVE ------->
 
 
 <!-----------------------[  Limitations  ]----------------------<optional> section below----------------->
 
-<!-- 
+
 ### Limitations 
---> 
+
 
 <!-- 
 INSTRUCTIONS:
@@ -281,6 +233,10 @@ How to Evaluate & Examples:
 -->
 
 <!---- [TODO]  CONTENT GOES BELOW ------->
+1. Supports only Microsoft Entra Id for authentication
+1. Supports only single Microsoft Entra Id tenant for SSO
+1. Supports only single GitHub organization
+ 
 
 <!------====-- CONTENT GOES ABOVE ------->
 
@@ -294,7 +250,7 @@ INSTRUCTIONS:
 - This section links to information useful to any user of this repository new to internal GitHub policies & workflows.
 -->
 
- If you have trouble doing something related to this repository, please keep in mind that the following actions require 
+ <!-- If you have trouble doing something related to this repository, please keep in mind that the following actions require 
  using [GitHub inside Microsoft (GiM) tooling](https://aka.ms/gim/docs) and not the normal GitHub visible user interface!
 - [Switching between EMU GitHub and normal GitHub without logging out and back in constantly](https://aka.ms/StartRight/README-Template/maintainingMultipleAccount)
 - [Creating a repository](https://aka.ms/StartRight)
@@ -308,6 +264,6 @@ INSTRUCTIONS:
 
 This README started as a template provided as part of the 
 [StartRight](https://aka.ms/gim/docs/startright) tool that is used to create new repositories safely. Feedback on the
-[README template](https://aka.ms/StartRight/README-Template) used in this repository is requested as an issue. 
+[README template](https://aka.ms/StartRight/README-Template) used in this repository is requested as an issue.  -->
 
 <!-- version: 2023-04-07 [Do not delete this line, it is used for analytics that drive template improvements] -->

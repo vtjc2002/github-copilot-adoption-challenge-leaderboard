@@ -276,7 +276,7 @@ After initializing the scoring system, you can optionally add sample challenges 
 > **⚠️ Important:** You will need to customize these challenges based on what features are available in your environment. Some challenges may reference preview features or GitHub Copilot Enterprise capabilities that might not be enabled for your organization.
 
 **Before adding challenges:**
-- Review the available challenge types in the repository: `src/app/Challenges/insert.sql`
+- Review the available challenge types in the repository: `src/challenges/insert.sql`
 - Identify which GitHub Copilot features are enabled for your organization
 - Remove or modify challenges that reference unavailable features
 - Consult with your GitHub Copilot administrator about feature availability
@@ -301,7 +301,7 @@ The full script includes challenges across multiple categories:
 
 **Option 1: Add Selected Challenges (Recommended)**
 
-1. Review the challenge script at `src/app/Challenges/insert.sql`
+1. Review the challenge script at `src/challenges/insert.sql`
 2. Identify 5-10 challenges that match your available features
 3. Copy only those INSERT statements
 4. Execute them in Query Editor as shown in the scoring system setup
@@ -312,7 +312,7 @@ If you want to add all challenges initially and remove unavailable ones later:
 
 1. Go to Azure Portal → SQL Server → SQL databases → leaderboarddb
 2. Click **Query editor (preview)** and authenticate
-3. Open the full script from your local repository: `src/app/Challenges/insert.sql`
+3. Open the full script from your local repository: `src/challenges/insert.sql`
 4. Copy and execute the INSERT statements
 5. Review the challenges in the application and deactivate any that aren't applicable
 

@@ -25,7 +25,7 @@ if ($existingAppRaw -and $existingAppRaw -ne "null") {
 }
 $ClientId = $AppRegistration.appId
 
-
+# create client secret
 $passwordExpiry = (Get-Date).ToUniversalTime().AddDays($passwordDaysToExpiration).ToString("yyyy-MM-ddTHH:mm:ssZ")
 $ClientSecret = (az ad app credential reset --id $ClientId --display-name $appDisplayName --append --end-date $passwordExpiry --query password -o tsv)
 
