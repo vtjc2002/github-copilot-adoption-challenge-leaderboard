@@ -1,5 +1,0 @@
-﻿---
-Title: Generate Documentation Using GitHub Copilot Tools
-Source: insert.sql
----
-<!-- Summary --> <p style="font-size: 1.1rem; color: #333;"> This module explores the generation of code explanations, project documentation, and inline code comment documentation using the GitHub Copilot Chat extension for Visual Studio Code. </p> <!-- Learning Objectives --> <h5 class="mt-4" style="font-weight: 600;">Learning objectives</h5> <p>By the end of this module, you'll be able to:</p> <ul style="font-size: 1rem; line-height: 1.6;"> <li>Generate explanations of code blocks, code files, and entire code workspaces using the GitHub Copilot Chat extension for Visual Studio Code.</li> <li>Generate code project documentation using the GitHub Copilot Chat extension for Visual Studio Code.</li> <li>Generate inline code documentation using the GitHub Copilot Chat extension for Visual Studio Code.</li> </ul> <!-- CTA Button --> <div class="mt-4"> <a href="https://learn.microsoft.com/en-us/training/modules/generate-documentation-using-github-copilot-tools/" target="_blank" class="btn btn-primary"> Go to Learning Module </a> </div>

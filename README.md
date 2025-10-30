@@ -75,7 +75,7 @@ How to Evaluate & Examples:
   - https://aka.ms/StartRight/README-Template/Instructions#installing
 
 <!---- [TODO]  CONTENT GOES BELOW ------->
-Deploy the entire application with a single command using Azure Developer CLI:
+Deploy the entire application with a few commands using Azure Developer CLI and PowerShell scripts:
 
 ```bash
 ## set the necessary environment variables first.  Make sure to replace the placeholders with your actual values.
