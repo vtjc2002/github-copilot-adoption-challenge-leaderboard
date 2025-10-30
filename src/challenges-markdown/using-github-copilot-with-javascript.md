@@ -3,11 +3,11 @@ Title: Using GitHub Copilot with JavaScript
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 To work with JavaScript, take advantage of GitHub Copilot, an AI pair programmer that boosts productivity with autocomplete-style suggestions.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you're able to:
 

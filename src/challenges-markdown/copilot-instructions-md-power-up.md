@@ -3,11 +3,11 @@ Title: Copilot-instructions.md power-up
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this personalization exercise you will add a `copilot-instructions.md` file to your repository root (or use the VS Code Personalize panel) and write three sentences that describe your preferred coding style, frameworks, and docstring format. After saving the file you will ask GitHub Copilot to draft a helper utility and observe how it follows your new instructions. The task should take about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Creating or editing `copilot-instructions.md` to guide Copilot output.
 
@@ -17,11 +17,11 @@ In this personalization exercise you will add a `copilot-instructions.md` file t
 
 - Committing repository level instructions for team visibility.
 
-## Before you start
+### Before you start
 
 Ensure GitHub Copilot is enabled in **your IDE** such as VS Code JetBrains or Visual Studio. Have at least one branch where you can commit the new file without affecting production code.
 
-## Steps
+### Steps
 
 - **Step 1.** Create and check out a branch named `copilot-instructions` using `git checkout -b copilot-instructions` or the source control panel.
 
@@ -45,7 +45,7 @@ Example: `I use four space indentation and snake_case for functions. All helpers
 
 - **Step 7.** Stage and commit `.github/copilot-instructions.md` with a clear message then push the branch and open a pull request.
 
-## Checkpoint
+### Checkpoint
 
 1. Did you add three clear sentences to `copilot-instructions.md`
 
@@ -62,7 +62,7 @@ Example: `I use four space indentation and snake_case for functions. All helpers
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Custom instructions for GitHub Copilot](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot)
 

@@ -3,11 +3,11 @@ Title: Internationalisation sweep
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this localisation exercise you will use **GitHub Copilot Chat in EDIT mode** to internationalise a React view. Copilot will wrap hard coded user facing strings in `t()` calls and create an `en.json` translation file. You will then verify that the application still renders correctly. Plan about twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Finding hard coded strings in a React component.
 
@@ -17,11 +17,11 @@ In this localisation exercise you will use **GitHub Copilot Chat in EDIT mode** 
 
 - Running and visually verifying the app after internationalisation.
 
-## Before you start
+### Before you start
 
 Confirm Copilot Chat is enabled in **your IDE** such as VS Code or JetBrains. Ensure your React project uses a library like `react-i18next` and runs successfully with `npm start` or `yarn dev`.
 
-## Steps
+### Steps
 
 - **Step 1.** Open a React component that contains visible hard coded strings for example headings button labels or error messages.
 
@@ -35,7 +35,7 @@ Confirm Copilot Chat is enabled in **your IDE** such as VS Code or JetBrains. En
 
 - **Step 6.** Commit the changes including the updated component and `en.json` with a descriptive message.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot replace every hard coded string with a `t()` call
 
@@ -52,7 +52,7 @@ Confirm Copilot Chat is enabled in **your IDE** such as VS Code or JetBrains. En
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [react-i18next documentation](https://react.i18next.com/)
 

@@ -11,6 +11,7 @@ This guide will help you provision the Leaderboard App infrastructure and then d
 ## Quick Start (Recommended)
 
 ###  One-Command Deployment
+__This step is already completed by seed-database.ps1 as part of the README quick start.__
 
 The fastest and easiest way to get started:
 
@@ -80,7 +81,7 @@ azd provision
 
 ### Configure SQL Database Permissions (Required)
 
-The deployment now automates SQL permission setup for the App Service managed identity. Run the helper script before `azd up` to collect the necessary details from your current Azure CLI session.
+The deployment now automates SQL permission setup for the App Service managed identity. Run the helper script before `azd up` to collect the necessary details from your current Azure CLI session. __This step is already completed by seed-database.ps1 as part of the README quick start.__
 
 #### One-Time Setup Workflow
 
@@ -176,7 +177,7 @@ The app will then connect successfully through the private endpoint.
 
 ### Initialize Scoring System (Required)
 
-After granting SQL permissions and before using the application, you must initialize the Activities table with the default scoring system. This defines how different GitHub Copilot activities are weighted and scored.
+After granting SQL permissions and before using the application, you must initialize the Activities table with the default scoring system. This defines how different GitHub Copilot activities are weighted and scored. __This step is already completed by seed-database.ps1 as part of the README quick start.__
 
 > **⚠️ Important:** This is a one-time setup that must be done after the database is accessible but before challenges can be populated.
 

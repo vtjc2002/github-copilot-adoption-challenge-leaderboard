@@ -3,11 +3,11 @@ Title: Refactor with confidence
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this activity you will use **GitHub Copilot Chat** to refactor a long method by extracting smaller helper methods while keeping behaviour unchanged. Copilot will also create unit tests first so you can confirm nothing breaks. The exercise should take about twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Selecting a candidate for refactor in your own code.
 
@@ -17,11 +17,11 @@ In this activity you will use **GitHub Copilot Chat** to refactor a long method 
 
 - Committing refactor changes with confidence.
 
-## Prerequisites
+### Prerequisites
 
 Ensure Copilot Chat is enabled in **your IDE** such as VS Code JetBrains or Visual Studio. Confirm your project has a working test runner like Jest PyTest JUnit or xUnit.
 
-## Steps
+### Steps
 
 - **Step 1.** Locate a method longer than about thirty lines that mixes multiple responsibilities.
 
@@ -37,7 +37,7 @@ Ensure Copilot Chat is enabled in **your IDE** such as VS Code JetBrains or Visu
 
 - **Step 7.** Commit the changes with a descriptive message. You may let Copilot draft the commit message once your staged diff is ready.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot create unit tests before performing the refactor
 
@@ -54,7 +54,7 @@ Ensure Copilot Chat is enabled in **your IDE** such as VS Code JetBrains or Visu
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Refactoring code with GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/guides-on-using-github-copilot/refactoring-code-with-github-copilot)
 

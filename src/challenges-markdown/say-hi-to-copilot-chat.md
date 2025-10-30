@@ -3,11 +3,11 @@ Title: Say hi to Copilot Chat
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this exercise you will use **GitHub Copilot Chat** to understand and improve code that already exists in your repository. You will select a confusing block, ask Copilot Chat to explain it, then request a simpler rewrite. The entire task should take about twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Opening Copilot Chat inside your IDE.
 
@@ -17,11 +17,11 @@ In this exercise you will use **GitHub Copilot Chat** to understand and improve 
 
 - Evaluating and applying a suggested rewrite to your own code.
 
-## Prerequisites
+### Prerequisites
 
 Confirm that Copilot Chat is enabled in **your IDE** (use the Copilot sidebar in VS Code or the Copilot Chat tool window in JetBrains and Visual Studio). Work inside a repository you own or have permission to change.
 
-## Steps
+### Steps
 
 - **Step 1.** Select a block of code that you find hard to read or overly complex.
 
@@ -35,7 +35,7 @@ Confirm that Copilot Chat is enabled in **your IDE** (use the Copilot sidebar in
 
 - **Step 6.** Commit the change with a clear message. You can pause at the commit prompt and let Copilot propose a message if you wish.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot Chat provide an explanation that aligned with your understanding of the code
 
@@ -52,7 +52,7 @@ Confirm that Copilot Chat is enabled in **your IDE** (use the Copilot sidebar in
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Getting started with Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat)
 

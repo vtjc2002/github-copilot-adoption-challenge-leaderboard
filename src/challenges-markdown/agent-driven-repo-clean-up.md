@@ -3,11 +3,11 @@ Title: Agent driven repo clean up
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this exercise you will use **GitHub Copilot Agent mode** to automate a repository clean up. You will prompt the Agent to find dead code paths across the project and create a pull request that removes them. After reviewing the changes and running tests you will merge the pull request. Set aside twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Prompting Copilot Agents for repository wide analysis.
 
@@ -17,11 +17,11 @@ In this exercise you will use **GitHub Copilot Agent mode** to automate a reposi
 
 - Running tests before merging automated clean-up changes.
 
-## Before you start
+### Before you start
 
-Install the latest **GitHub Copilot** extension in VS Code and enable Agent mode under **Settings > GitHub Copilot > Agents**. Ensure your repository builds cleanly and that all tests pass with `npm test` `pytest` `dotnet test` or your framework’s command.
+Install the latest **GitHub Copilot** extension in VS Code and enable Agent mode under **Settings > GitHub Copilot > Agents**. Ensure your repository builds cleanly and that all tests pass with `npm test` `pytest` `dotnet test` or your framework's command.
 
-## Steps
+### Steps
 
 - **Step 1.** Open the repository in VS Code and switch to the Copilot panel. Click **Agent** to enter Agent mode.
 
@@ -37,7 +37,7 @@ Install the latest **GitHub Copilot** extension in VS Code and enable Agent mode
 
 - **Step 7.** Once tests pass click **Merge pull request**. Delete the branch if prompted.
 
-## Checkpoint
+### Checkpoint
 
 1. Did the Agent open a pull request that deleted only dead code
 
@@ -54,7 +54,7 @@ Install the latest **GitHub Copilot** extension in VS Code and enable Agent mode
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot Agents overview](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode)
 

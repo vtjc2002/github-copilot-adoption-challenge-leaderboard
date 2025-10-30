@@ -3,11 +3,11 @@ Title: Enterprise policy testing
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this governance exercise you will run the **/policy** slash command in GitHub Copilot Chat to generate a `.github/copilot-policy.yml` file that blocks model usage on files containing secrets. You will commit the policy file on a new branch and open a pull request for organisational review. Plan about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Invoking the `/policy` command in Copilot Chat.
 
@@ -17,11 +17,11 @@ In this governance exercise you will run the **/policy** slash command in GitHub
 
 - Understanding responsible AI controls in GitHub Copilot Enterprise.
 
-## Before you start
+### Before you start
 
 Copilot policy management requires **GitHub Copilot Enterprise**. Confirm you have write access to an organisation repository and that Copilot Chat is enabled in your IDE (VS Code JetBrains or Visual Studio). The Copilot policy management feature is available only with GitHub Copilot Enterprise.
 
-## Steps
+### Steps
 
 - **Step 1.** Create a branch named `copilot-policy-secrets` with `git checkout -b copilot-policy-secrets` or your IDE branch UI.
 
@@ -37,7 +37,7 @@ Copilot policy management requires **GitHub Copilot Enterprise**. Confirm you ha
 
 - **Step 7.** Once approved merge the pull request to enforce the policy on the default branch.
 
-## Checkpoint
+### Checkpoint
 
 1. Did `.github/copilot-policy.yml` include blocked paths for secret files
 
@@ -54,7 +54,7 @@ Copilot policy management requires **GitHub Copilot Enterprise**. Confirm you ha
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Organisation policies for Copilot](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-policies-for-copilot-in-your-organization)
 

@@ -3,11 +3,11 @@ Title: Automated PR review rules
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this challenge, you’ll enable GitHub Copilot’s **Review changes** feature to provide AI-generated suggestions on your pull requests. After configuring your repository to use Copilot for reviews, you’ll open a pull request and see Copilot’s inline review comments in action. This activity takes about fifteen minutes. Note that some of the features in this challenge requires **GitHub Enterpise.**
 
-## What you will learn
+### What you will learn
 
 - How to enable GitHub Copilot’s review features for pull requests.
 
@@ -17,11 +17,11 @@ In this challenge, you’ll enable GitHub Copilot’s **Review changes** feature
 
 - How to complete the review and merge process with both AI and human approvals.
 
-## Before you start
+### Before you start
 
 You need **GitHub Copilot** access and appropriate permissions to open pull requests in the target repository. Ensure that GitHub Copilot is enabled for your account and the repository. The **Review changes** feature uses premium Copilot requests.
 
-## Steps
+### Steps
 
 - **Step 1.** In the browser, open the repository and create a new branch using `git checkout -b copilot-review-test`. Make a small change in the code.
 
@@ -35,7 +35,7 @@ You need **GitHub Copilot** access and appropriate permissions to open pull requ
 
 - **Step 6.** Request a human review if needed, then complete the merge once both AI and human reviewers (if required) have approved.
 
-## Checkpoint
+### Checkpoint
 
 1. Did you successfully initiate a Copilot review on a pull request?
 
@@ -52,7 +52,7 @@ You need **GitHub Copilot** access and appropriate permissions to open pull requ
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Using Copilot for code review](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review)
 

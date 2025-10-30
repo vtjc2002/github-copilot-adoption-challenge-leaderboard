@@ -3,7 +3,7 @@ Title: PRD - Stories - Code (voice-first)
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this end-to-end workflow you will start with a lightweight Product Requirements Document named `product-x.prd.md`. Using **GitHub Copilot Chat in Agent mode with voice input**you will:
 
@@ -13,7 +13,7 @@ In this end-to-end workflow you will start with a lightweight Product Requiremen
 - Review the output, commit, and open a pull request.
 - Plan about thirty minutes.
 
-## What you will learn
+### What you will learn
 
 - Writing a concise PRD in markdown.
 
@@ -23,11 +23,11 @@ In this end-to-end workflow you will start with a lightweight Product Requiremen
 
 - Generating starter code and tests directly from requirements.
 
-## Before you start
+### Before you start
 
 Enable microphone permissions for Copilot Chat in VS Code. Confirm you have write access to the repository and an available test runner (Jest PyTest JUnit or similar). Create `docs/product-x.prd.md` with a brief description of the new feature.
 
-## Steps
+### Steps
 
 - **Step 1.** Create and check out a branch called `feature-product-x` using `git checkout -b feature-product-x`.
 
@@ -43,7 +43,7 @@ Enable microphone permissions for Copilot Chat in VS Code. Confirm you have writ
 
 - **Step 7.** Push the branch and open a pull request titled `feat: scaffold Product X epics stories Gherkin and stubs`.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot generate epics user stories and acceptance criteria from the PRD
 
@@ -60,7 +60,7 @@ Enable microphone permissions for Copilot Chat in VS Code. Confirm you have writ
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot Agents overview](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode)
 

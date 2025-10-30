@@ -3,11 +3,11 @@ Title: Doc to spec converter
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this exercise you will use **GitHub Copilot Agents** inside VS Code to summarise a set of commits that modified your module (eg:Authentication module). You will ask the Agent `Summarise auth module changes across commits a1…a6 in this repo` then review the generated overview. Plan about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Enabling Copilot Agent mode in VS Code.
 
@@ -17,11 +17,11 @@ In this exercise you will use **GitHub Copilot Agents** inside VS Code to summar
 
 - Sharing the summary with your team or attaching it to a pull request.
 
-## Before you start
+### Before you start
 
 Install the latest **GitHub Copilot** extension in VS Code and enable Agent mode under **Settings > GitHub Copilot > Agents**. Ensure you have at least six sequential commits that touched the module (ex: authentication) and know their hashes (for example `a1` through `a6`).
 
-## Steps
+### Steps
 
 - **Step 1.** Open your repository in VS Code and switch to the Copilot panel. Click **Agent** to enter Agent mode.
 
@@ -35,7 +35,7 @@ Install the latest **GitHub Copilot** extension in VS Code and enable Agent mode
 
 - **Step 6.** Commit the summary file on a new branch and push for review.
 
-## Checkpoint
+### Checkpoint
 
 1. Did the Agent return a clear description of all six commits
 
@@ -52,6 +52,6 @@ Install the latest **GitHub Copilot** extension in VS Code and enable Agent mode
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot Agents overview](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode)

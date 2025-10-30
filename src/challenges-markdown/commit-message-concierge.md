@@ -3,11 +3,11 @@ Title: Commit message concierge
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 This exercise shows how to let **GitHub Copilot** write commit messages for you. You will stage today’s changes invoke Copilot’s commit message helper accept the draft then amend it with extra context if required. The task should take ten to fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Staging file changes with `git add` or your IDE source control panel.
 
@@ -17,11 +17,11 @@ This exercise shows how to let **GitHub Copilot** write commit messages for you.
 
 - Committing and pushing the change to your remote repository.
 
-## Prerequisites
+### Prerequisites
 
 Confirm that GitHub Copilot is enabled in **your IDE** for example VS Code JetBrains or Visual Studio. Make sure you have several modified files ready to commit in your repository.
 
-## Steps
+### Steps
 
 - **Step 1.** Stage all changes by running `git add -A` in the terminal or selecting files in the IDE source control view.
 
@@ -43,7 +43,7 @@ Confirm that GitHub Copilot is enabled in **your IDE** for example VS Code JetBr
 
 - **Step 6.** Push the commit to your remote with `git push` or the IDE push command.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot generate a commit message automatically from your staged changes
 
@@ -60,6 +60,6 @@ Confirm that GitHub Copilot is enabled in **your IDE** for example VS Code JetBr
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Generating commit messages with Copilot](https://docs.github.com/en/copilot/getting-started-with-github-copilot#generate-commit-messages)

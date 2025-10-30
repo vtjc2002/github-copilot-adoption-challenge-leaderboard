@@ -3,11 +3,11 @@ Title: Cross repo migration assistant
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this multi-repository automation task, you’ll use **GitHub Copilot (Pro/Pro+/Business)** inside VS Code to build GitHub Actions workflows that automate updates to import paths when a shared `utils` package is moved into a monorepo. You’ll create workflows for three satellite repositories—`repo-A`, `repo-B`, and `repo-C`—and validate the process with test runs and pull requests. Allocate thirty minutes.
 
-## What you will learn
+### What you will learn
 
 - Using GitHub Copilot to generate Actions workflows for cross-repo automation.
 
@@ -17,11 +17,11 @@ In this multi-repository automation task, you’ll use **GitHub Copilot (Pro/Pro
 
 - Reviewing Copilot-assisted PRs and verifying test results.
 
-## Before you start
+### Before you start
 
 Install the latest **GitHub Copilot extension** in VS Code and ensure you have an active subscription. Confirm push rights to the monorepo and all satellite repositories. Make sure each repo has working CI pipelines configured using GitHub Actions.
 
-## Steps
+### Steps
 
 - **Step 1.** Move the `utils` package into the monorepo under `packages/utils`. Commit and push the changes.
 
@@ -42,7 +42,7 @@ Install the latest **GitHub Copilot extension** in VS Code and ensure you have a
 
 - **Step 7.** Clean up any obsolete `utils` folders in satellite repos and confirm that your imports rely only on the monorepo package.
 
-## Checkpoint
+### Checkpoint
 
 1. Did you use Copilot to create a GitHub Action workflow in each satellite repo?
 
@@ -59,7 +59,7 @@ Install the latest **GitHub Copilot extension** in VS Code and ensure you have a
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Using GitHub Actions workflows](https://docs.github.com/en/actions/using-workflows)
 

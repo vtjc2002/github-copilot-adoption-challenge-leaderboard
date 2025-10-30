@@ -3,11 +3,11 @@ Title: Develop Code Features Using GitHub Copilot Tools
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 This module explores using GitHub Copilot and GitHub Copilot Chat suggestions to create new code. Autocompletion and code update suggestions are generated, managed, and implemented using the GitHub Copilot extensions for Visual Studio Code.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you're able to:
 

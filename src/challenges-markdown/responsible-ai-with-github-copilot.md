@@ -3,11 +3,11 @@ Title: Responsible AI with GitHub Copilot
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 This module explores the responsible use of AI in the context of GitHub Copilot, a generative AI tool for developers. It will equip you with the knowledge and skills to leverage Copilot effectively while mitigating potential ethical and operational risks associated with AI usage.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, students will be able to:
 

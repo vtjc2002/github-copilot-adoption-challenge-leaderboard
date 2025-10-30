@@ -3,11 +3,11 @@ Title: Slash @terminal debugging
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this debugging exercise you will intentionally break a script in your repository then use **@terminal** in GitHub Copilot Chat to diagnose and fix the failure. Expect to spend fifteen to twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Capturing the last terminal command context with `@terminal`.
 
@@ -17,11 +17,11 @@ In this debugging exercise you will intentionally break a script in your reposit
 
 - Verifying the script works after the fix.
 
-## Prerequisites
+### Prerequisites
 
 Confirm Copilot Chat is enabled in **your IDE** such as VS Code JetBrains or Visual Studio. Open a repository that contains a script you can safely modify for example a Bash or Python utility.
 
-## Steps
+### Steps
 
 - **Step 1.** Open a script or a code file and introduce a simple error such as a misspelled variable name or missing import.
 
@@ -37,7 +37,7 @@ Confirm Copilot Chat is enabled in **your IDE** such as VS Code JetBrains or Vis
 
 - **Step 7.** Commit the corrected script with a clear message drafted by you or suggested by Copilot.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot correctly explain the reason for the failure
 
@@ -54,6 +54,6 @@ Confirm Copilot Chat is enabled in **your IDE** such as VS Code JetBrains or Vis
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Terminal use overview](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-in-windows-terminal)

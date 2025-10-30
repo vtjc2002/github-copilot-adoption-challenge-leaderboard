@@ -3,11 +3,11 @@ Title: Developer Use Cases for AI with GitHub Copilot
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 This module explores how GitHub Copilot streamlines developer productivity through AI-powered features. It enhances the Software Development Life Cycle (SDLC), aligns with developer preferences, and identifies key limitations. Additionally, it measures productivity gains effectively.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you're able to:
 

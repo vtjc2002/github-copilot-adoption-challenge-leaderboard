@@ -3,11 +3,11 @@ Title: Introduction to GitHub Copilot for Business
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 Learn about the difference between GitHub Copilot Business versus GitHub Copilot Individuals. Also learn about specific use cases and customer stories for GitHub Copilot Business as well as how to enable it.
 
-## Learning Objectives
+### Learning Objectives
 
 At the end of this module, you'll be able to:
 

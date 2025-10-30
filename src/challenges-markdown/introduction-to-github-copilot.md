@@ -3,11 +3,11 @@ Title: Introduction to GitHub Copilot
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 GitHub Copilot uses OpenAI Codex to suggest code and entire functions in real time, right from your editor.
 
-## Learning Objectives
+### Learning Objectives
 
 In this module, you will:
 

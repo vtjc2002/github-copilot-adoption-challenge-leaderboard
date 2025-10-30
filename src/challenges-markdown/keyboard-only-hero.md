@@ -3,11 +3,11 @@ Title: Keyboard only hero
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this keyboard only challenge you will add a small new function to your project using GitHub Copilot completions without touching the mouse. You will use shortcut keys to cycle through suggestions accept code and record how long the task takes. Plan about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Starting Copilot inline completions with the keyboard.
 
@@ -17,11 +17,11 @@ In this keyboard only challenge you will add a small new function to your projec
 
 - Measuring productivity gains when you avoid the mouse.
 
-## Prerequisites
+### Prerequisites
 
 Ensure GitHub Copilot is active in **your IDE** (VS Code JetBrains Visual Studio or Neovim). Check that the inline completion shortcuts match your keymap. Have a stopwatch or phone timer ready.
 
-## Steps
+### Steps
 
 - **Step 1.** Decide on a simple new function for example `calculateAverage` that you can add to an existing file.
 
@@ -37,7 +37,7 @@ Ensure GitHub Copilot is active in **your IDE** (VS Code JetBrains Visual Studio
 
 - **Step 7.** Commit the change. You may let Copilot suggest the commit message by pausing at the prompt.
 
-## Checkpoint
+### Checkpoint
 
 1. Did you complete the task without using the mouse
 
@@ -54,7 +54,7 @@ Ensure GitHub Copilot is active in **your IDE** (VS Code JetBrains Visual Studio
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot keyboard shortcuts overview](https://code.visualstudio.com/docs/reference/default-keybindings)
 

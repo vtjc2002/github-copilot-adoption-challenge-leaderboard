@@ -3,11 +3,11 @@ Title: Vision preview quick win
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this quick win you will use **GitHub Copilot Chat Vision Preview** to turn an existing architecture diagram into C#/Java/JS code stubs. You will drag a PNG or SVG diagram from your repository into the chat panel ask Copilot to stub each service or class then save the generated files. The whole task should take fifteen to twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Adding image context to Copilot Chat Vision Preview.
 
@@ -17,11 +17,11 @@ In this quick win you will use **GitHub Copilot Chat Vision Preview** to turn an
 
 - Using a scratch branch to keep experiments separate from main.
 
-## Prerequisites
+### Prerequisites
 
 Copilot Chat Vision Preview currently works in **VS Code** only. Verify you have the latest VS Code and Copilot extension then enable the Vision feature in the extension settings. Make sure the diagram you want to use is already stored in your repository for example `docs/system-diagram.png`.
 
-## Steps
+### Steps
 
 - **Step 1.** Open the diagram file in the VS Code Explorer so you can see it in the file list.
 
@@ -39,7 +39,7 @@ Copilot Chat Vision Preview currently works in **VS Code** only. Verify you have
 
 - **Step 8.** Commit the stubs to the `vision-stubs` branch with a descriptive message created by you or drafted by Copilot.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot identify every main component in your diagram
 
@@ -56,7 +56,7 @@ Copilot Chat Vision Preview currently works in **VS Code** only. Verify you have
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot Vision Preview](https://code.visualstudio.com/updates/v1_98#_copilot-vision-preview)
 

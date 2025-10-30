@@ -3,11 +3,11 @@ Title: README booster
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this activity you will use **GitHub Copilot Chat** to add a new Setup or Contributing section to your project Readme. Copilot will draft the content you will review and edit then commit the updated file. Plan about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Prompting Copilot Chat to generate markdown content.
 
@@ -17,11 +17,11 @@ In this activity you will use **GitHub Copilot Chat** to add a new Setup or Cont
 
 - Previewing markdown to verify formatting.
 
-## Prerequisites
+### Prerequisites
 
 Confirm Copilot Chat is active in **your IDE** such as VS Code JetBrains or Visual Studio. Ensure your repository has a Readme in the root folder.
 
-## Steps
+### Steps
 
 - **Step 1.** Open `README.md` at the top of your project and place the cursor where the new section should go.
 
@@ -37,7 +37,7 @@ Confirm Copilot Chat is active in **your IDE** such as VS Code JetBrains or Visu
 
 - **Step 7.** Commit the change letting Copilot suggest the commit message if you wish then push to remote.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot generate a complete markdown section without manual writing
 
@@ -54,7 +54,7 @@ Confirm Copilot Chat is active in **your IDE** such as VS Code JetBrains or Visu
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot codebase overview](https://githubnext.com/projects/copilot-view/)
 

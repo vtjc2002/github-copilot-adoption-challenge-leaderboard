@@ -3,11 +3,11 @@ Title: Context augmented agent
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this advanced workflow, you’ll configure a **GitHub Copilot knowledge base** so that the Copilot Agent can reference your organization’s internal documentation. You’ll then ask the Agent to draft an ADR proposing a migration from a monolith to microservices. This task takes about thirty minutes.
 
-## What you will learn
+### What you will learn
 
 - Creating and managing a GitHub Copilot knowledge base.
 
@@ -17,11 +17,11 @@ In this advanced workflow, you’ll configure a **GitHub Copilot knowledge base*
 
 - Prompting the Agent to draft an ADR using contextual knowledge.
 
-## Before you start
+### Before you start
 
 Ensure your organization has **GitHub Copilot Enterprise** enabled. You must be an organization owner or have appropriate permissions to manage Copilot settings. Prepare your documentation (Markdown, text, or supported formats) and ensure it is stored in a GitHub repository or external location that can be added to a knowledge base.
 
-## Steps
+### Steps
 
 - **Step 1.** Navigate to your organization settings on GitHub.com. Under **Copilot**, click **Knowledge bases**, then click **New knowledge base**.
 
@@ -38,7 +38,7 @@ Ensure your organization has **GitHub Copilot Enterprise** enabled. You must be 
 
 - **Step 7.** Save the draft to `docs/adr/0005-microservices-migration.md`, make any organization-specific edits, commit the file, and push the branch for review.
 
-## Checkpoint
+### Checkpoint
 
 1. Did you successfully configure a Copilot knowledge base?
 
@@ -55,7 +55,7 @@ Ensure your organization has **GitHub Copilot Enterprise** enabled. You must be 
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Managing Copilot knowledge bases](https://docs.github.com/en/enterprise-cloud@latest/copilot/customizing-copilot/managing-copilot-knowledge-bases)
 

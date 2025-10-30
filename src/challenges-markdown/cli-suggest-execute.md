@@ -3,11 +3,11 @@ Title: CLI suggest & execute
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this exercise you will use **GitHub Copilot CLI** to suggest and run a command that cleans up local branches already merged into main. You will execute the suggestion then verify the result with `git branch`. The task should take about ten minutes.
 
-## What you will learn
+### What you will learn
 
 - Running `gh copilot suggest` to generate shell commands.
 
@@ -17,11 +17,11 @@ In this exercise you will use **GitHub Copilot CLI** to suggest and run a comman
 
 - Using Copilot CLI for other repository maintenance tasks.
 
-## Prerequisites
+### Prerequisites
 
 Confirm that GitHub CLI is installed with `gh --version`. Install the Copilot extension if needed using `gh extension install github/gh-copilot`. Authenticate with `gh auth login` and open a terminal in the root of a repository that has multiple merged branches.
 
-## Steps
+### Steps
 
 - **Step 1.** In the project root run the following command and press Enter.
 
@@ -37,7 +37,7 @@ Confirm that GitHub CLI is installed with `gh --version`. Install the Copilot ex
 
 - **Step 6.** Commit any auxiliary changes if applicable and push to remote.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot suggest a safe branch cleanup command
 
@@ -54,7 +54,7 @@ Confirm that GitHub CLI is installed with `gh --version`. Install the Copilot ex
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [GitHub Copilot CLI project page](https://githubnext.com/projects/copilot-cli)
 

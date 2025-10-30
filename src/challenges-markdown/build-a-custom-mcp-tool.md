@@ -3,11 +3,11 @@ Title: Build a custom MCP tool
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this advanced exercise you will fork your organisation’s local **Model-Context-Protocol (MCP) server**, add a custom “Jira issue creator” tool, and then call that tool from **GitHub Copilot Agent mode** to open a real Jira ticket. Set aside about thirty minutes.
 
-## What you will learn
+### What you will learn
 
 - Forking and running a local MCP server repository.
 
@@ -17,11 +17,11 @@ In this advanced exercise you will fork your organisation’s local **Model-Cont
 
 - Invoking the tool from Copilot Agent mode in VS Code to create a live Jira issue.
 
-## Before you start
+### Before you start
 
 Install the latest **GitHub Copilot Nightly** extension in VS Code and enable Agent mode under **Settings > GitHub Copilot > Agents**. Make sure you have: 1. An organisation repo named `mcp-server` (or similar) you can fork. 2. A Jira cloud instance and a personal API token. 3. `node` or `python` (match the server’s language) installed locally.
 
-## Steps
+### Steps
 
 - **Step 1.** Fork `github.com/your-org/mcp-server` to your account then clone the fork locally. Run `npm install` or `pip install -r requirements.txt` as required.
 
@@ -39,7 +39,7 @@ Install the latest **GitHub Copilot Nightly** extension in VS Code and enable Ag
 
 - **Step 8.** Commit your tool code to the fork and open a pull request back to the organisation repo.
 
-## Checkpoint
+### Checkpoint
 
 1. Did the MCP server start locally and pass the health check
 
@@ -56,7 +56,7 @@ Install the latest **GitHub Copilot Nightly** extension in VS Code and enable Ag
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot MCP project overview](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-chat-with-mcp)
 

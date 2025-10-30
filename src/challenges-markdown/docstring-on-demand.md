@@ -3,11 +3,11 @@ Title: Docstring on demand
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 This exercise shows how to let **GitHub Copilot** write documentation for your own code. You will insert a docstring marker above an undocumented function or class and accept the generated text. The task should take about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Triggering docstring generation with `/**` in languages such as JavaScript Java and C#.
 
@@ -17,11 +17,11 @@ This exercise shows how to let **GitHub Copilot** write documentation for your o
 
 - Reviewing and editing generated documentation for clarity and accuracy.
 
-## Prerequisites
+### Prerequisites
 
 Make sure GitHub Copilot is active in **your IDE** (VS Code JetBrains Visual Studio or Neovim). Open a repository you own or maintain so you can save changes.
 
-## Steps
+### Steps
 
 - **Step 1.** Find a function or class in your code that has no documentation.
 
@@ -37,7 +37,7 @@ Make sure GitHub Copilot is active in **your IDE** (VS Code JetBrains Visual Stu
 
 - **Step 7.** Commit your changes with a message that mentions added documentation. You may let Copilot draft the commit message at the prompt.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot generate a docstring without manual typing
 
@@ -54,7 +54,7 @@ Make sure GitHub Copilot is active in **your IDE** (VS Code JetBrains Visual Stu
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Getting started with GitHub Copilot](https://docs.github.com/en/copilot/getting-started-with-github-copilot)
 

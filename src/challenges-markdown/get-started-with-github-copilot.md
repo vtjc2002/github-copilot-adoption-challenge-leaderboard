@@ -3,11 +3,11 @@ Title: Get Started with GitHub Copilot
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 This module introduces developers to the GitHub Copilot products, the benefits that GitHub Copilot provides to developers, the GitHub Copilot and GitHub Copilot Chat product features, and the GitHub Copilot extensions for Visual Studio Code.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you'll be able to:
 

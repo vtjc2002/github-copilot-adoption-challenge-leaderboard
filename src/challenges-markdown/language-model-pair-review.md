@@ -3,11 +3,11 @@ Title: Language model pair review
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 This activity shows how to include **GitHub Copilot** as an automated reviewer on a pull request. You will assign Copilot to your PR respond to at least one AI generated comment then merge the pull request. The exercise takes about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Adding Copilot as a reviewer on a pull request.
 
@@ -17,11 +17,11 @@ This activity shows how to include **GitHub Copilot** as an automated reviewer o
 
 - Merging the pull request after AI and human approval.
 
-## Prerequisites
+### Prerequisites
 
 Ensure you have **Copilot Enterprise** and Copilot code review is enabled in your repository settings. If unsure, check with your GitHub admin. Have a pull request ready that contains meaningful changes but is not yet merged.
 
-## Steps
+### Steps
 
 - **Step 1.** Open your pull request on GitHub and click **Reviewers**.
 
@@ -35,7 +35,7 @@ Ensure you have **Copilot Enterprise** and Copilot code review is enabled in you
 
 - **Step 6.** Once all reviewers including Copilot have approved click **Merge pull request**.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot provide review comments on your pull request
 
@@ -52,7 +52,7 @@ Ensure you have **Copilot Enterprise** and Copilot code review is enabled in you
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot code review overview](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review)
 

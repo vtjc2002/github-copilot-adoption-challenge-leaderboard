@@ -3,11 +3,11 @@ Title: Slash command speed run
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 This exercise shows how to use the **/tests** slash command in GitHub Copilot Chat to generate unit tests for code you just changed. You will invoke the command, accept the resulting test file, then run your usual test runner to confirm everything passes. Expect to finish in fifteen to twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Opening Copilot Chat and issuing a slash command.
 
@@ -17,11 +17,11 @@ This exercise shows how to use the **/tests** slash command in GitHub Copilot Ch
 
 - Running your existing test framework to validate results.
 
-## Prerequisites
+### Prerequisites
 
 Ensure GitHub Copilot Chat is enabled in **your IDE** (VS Code JetBrains Visual Studio or Neovim). Confirm your project has a working test runner such as Jest PyTest JUnit or xUnit. Open a file you modified in the last commit.
 
-## Steps
+### Steps
 
 - **Step 1.** Place the cursor inside the file you recently edited. No need to select text.
 
@@ -35,7 +35,7 @@ Ensure GitHub Copilot Chat is enabled in **your IDE** (VS Code JetBrains Visual 
 
 - **Step 6.** Commit the new test file with a clear message. You can let Copilot draft the commit message if you pause at the prompt.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot create a test file without manual coding
 
@@ -52,7 +52,7 @@ Ensure GitHub Copilot Chat is enabled in **your IDE** (VS Code JetBrains Visual 
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot Chat slash commands reference](https://learn.microsoft.com/en-us/visualstudio/ide/copilot-chat-context)
 

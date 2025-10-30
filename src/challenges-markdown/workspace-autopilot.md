@@ -3,11 +3,11 @@ Title: Workspace autopilot
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this activity you will use **GitHub Copilot Workspace in GitHub Enterprise** to fix a real issue in your repository. Copilot Workspace will create a plan generate a new branch apply the changes and open a pull request for review. Expect to spend twenty to twenty five minutes.
 
-## What you will learn
+### What you will learn
 
 - Enabling Copilot Workspace on a GitHub Issue.
 
@@ -17,11 +17,11 @@ In this activity you will use **GitHub Copilot Workspace in GitHub Enterprise** 
 
 - Verifying the pull request fixes the bug before merging.
 
-## Before you start
+### Before you start
 
 Copilot Workspace is currently available in **VS Code** with the Copilot Nightly extension. Confirm you have the Nightly build installed and signed in to GitHub. Ensure there is a GitHub Issue in your repository that describes a reproducible bug.
 
-## Steps
+### Steps
 
 - **Step 1.** Open the Issue you want to fix in your browser and click **Open in Copilot Workspace**.
 
@@ -37,7 +37,7 @@ Copilot Workspace is currently available in **VS Code** with the Copilot Nightly
 
 - **Step 7.** Close the original Issue if it did not close automatically.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot Workspace generate a clear task plan for the Issue
 
@@ -54,7 +54,7 @@ Copilot Workspace is currently available in **VS Code** with the Copilot Nightly
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot Workspace project overview](https://githubnext.com/projects/copilot-workspace)
 

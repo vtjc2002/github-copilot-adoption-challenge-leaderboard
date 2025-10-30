@@ -3,11 +3,11 @@ Title: GitHub Copilot Across Environments: IDE, Chat, and Command Line Technique
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 Explore the multifaceted capabilities of GitHub Copilot across various development environments. Learn to harness AI-assisted coding in your IDE, engage in natural language conversations for complex tasks, and enhance your command-line productivity.
 
-## Learning Objectives
+### Learning Objectives
 
 At the end of this module, you'll be able to:
 

@@ -3,11 +3,11 @@ Title: Develop Unit Tests Using GitHub Copilot Tools
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 This module explores using GitHub Copilot and GitHub Copilot Chat to create unit tests. Exercises provide practical experience creating unit test projects and running unit tests in Visual Studio Code.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you're able to:
 

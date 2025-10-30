@@ -3,11 +3,11 @@ Title: Snippet translation
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 This exercise demonstrates how to use **GitHub Copilot Chat** to convert code from one language to another. You will copy a snippet from your repository for example Java ask Copilot Chat to translate it into Go idioms then place the result in a scrapbook branch for review. Plan about twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Sending context aware prompts to Copilot Chat.
 
@@ -17,11 +17,11 @@ This exercise demonstrates how to use **GitHub Copilot Chat** to convert code fr
 
 - Isolating experiments in a scrapbook or draft branch.
 
-## Prerequisites
+### Prerequisites
 
 Confirm Copilot Chat is active in **your IDE** such as VS Code JetBrains Visual Studio or Neovim. Ensure you have permissions to create a new branch in the repository you are using.
 
-## Steps
+### Steps
 
 - **Step 1.** Open a file that contains a non trivial snippet you want to translate for example a Java method.
 
@@ -37,7 +37,7 @@ Confirm Copilot Chat is active in **your IDE** such as VS Code JetBrains Visual 
 
 - **Step 7.** Commit the file with a descriptive message such as Add Go translation of example snippet.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot produce syntactically correct code in the target language
 
@@ -54,7 +54,7 @@ Confirm Copilot Chat is active in **your IDE** such as VS Code JetBrains Visual 
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Translating code across languages with Copilot](https://docs.github.com/en/copilot/copilot-chat-cookbook/refactoring-code/translating-code-to-a-different-programming-language)
 

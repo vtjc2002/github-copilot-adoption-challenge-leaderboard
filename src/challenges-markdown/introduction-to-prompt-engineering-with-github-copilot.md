@@ -3,11 +3,11 @@ Title: Introduction to Prompt Engineering with GitHub Copilot
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 Discover the essentials of creating effective prompts with GitHub Copilot. Uncover techniques to transform your coding comments into precise, actionable code, enhancing your development workflow.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you''re able to:
 

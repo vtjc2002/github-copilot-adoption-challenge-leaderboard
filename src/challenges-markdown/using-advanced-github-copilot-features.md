@@ -3,11 +3,11 @@ Title: Using Advanced GitHub Copilot Features
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 Use advanced GitHub Copilot features with a Python application.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you'll be able to:
 

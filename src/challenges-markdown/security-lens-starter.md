@@ -3,11 +3,11 @@ Title: Security lens starter
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this security focused exercise you will copy a data access function from your repository that may contain a vulnerability. You will ask **GitHub Copilot Chat** to identify potential OWASP risks and provide a safer version of the code. Finally you will write a quick unit test to confirm the fix works. Allocate about twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Sending real code snippets to Copilot Chat for security analysis.
 
@@ -17,11 +17,11 @@ In this security focused exercise you will copy a data access function from your
 
 - Writing a simple unit test to validate the secure behaviour.
 
-## Prerequisites
+### Prerequisites
 
 Ensure Copilot Chat is enabled in **your IDE** for example VS Code JetBrains or Visual Studio. Confirm your project has a working test runner such as Jest PyTest JUnit or xUnit.
 
-## Steps
+### Steps
 
 - **Step 1.** In your code, select a data access function that may be vulnerable for example one that concatenates user input into a SQL string.
 
@@ -37,7 +37,7 @@ Ensure Copilot Chat is enabled in **your IDE** for example VS Code JetBrains or 
 
 - **Step 7.** Commit the secure code and tests with a descriptive message drafted by you or suggested by Copilot.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot correctly highlight at least one OWASP risk in your original code
 
@@ -54,7 +54,7 @@ Ensure Copilot Chat is enabled in **your IDE** for example VS Code JetBrains or 
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Finding existing vulnerabilities in code](https://docs.github.com/en/copilot/copilot-chat-cookbook/security-analysis/finding-existing-vulnerabilities-in-code)
 

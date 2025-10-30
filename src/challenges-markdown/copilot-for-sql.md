@@ -3,11 +3,11 @@ Title: Copilot for SQL
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this activity you will let **GitHub Copilot** write SQL for you by adding a plain English comment to a data access file. Copilot will turn the comment `-- top 10 customers by spend last year` into a full query. You will run the query against your database and review the results. Allocate about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Prompting Copilot with natural language in SQL files.
 
@@ -17,11 +17,11 @@ In this activity you will let **GitHub Copilot** write SQL for you by adding a p
 
 - Validating query accuracy against sample data.
 
-## Before you start
+### Before you start
 
 Confirm Copilot is active in **your IDE** such as VS Code or JetBrains. Ensure you have a database connection configured and working query runner for example psql mysql cli or the built in database panel.
 
-## Steps
+### Steps
 
 - **Step 1.** Open the file in your data layer where SQL queries are stored for example `customerQueries.sql` or a repository migration file.
 
@@ -35,7 +35,7 @@ Confirm Copilot is active in **your IDE** such as VS Code or JetBrains. Ensure y
 
 - **Step 6.** Commit the new query file or update with a descriptive message possibly drafted by Copilot.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot produce a syntactically correct SQL query
 
@@ -52,7 +52,7 @@ Confirm Copilot is active in **your IDE** such as VS Code or JetBrains. Ensure y
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Generating SQL with GitHub Copilot](https://dev.to/karenpayneoregon/github-copilot-generate-sql-pd3)
 

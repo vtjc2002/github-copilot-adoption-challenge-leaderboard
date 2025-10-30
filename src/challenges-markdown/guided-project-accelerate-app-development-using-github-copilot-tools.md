@@ -3,11 +3,11 @@ Title: Guided Project - Accelerate App Development Using GitHub Copilot Tools
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 This module explores using GitHub Copilot to accelerate development of an end-to-end project. GitHub Copilot is used to explain unfamiliar code, generate project documentation, develop a new app feature, develop unit tests, and implement improvements.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you're able to:
 

@@ -3,11 +3,11 @@ Title: Explain my PR
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 This activity shows how to use **GitHub Copilot Explain** to create a human readable summary of a pull request. You will open a real PR you just raised click the Explain button on the Files changed tab then post the generated text as a PR comment. The task should take about fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Locating the Copilot Explain option on the Files changed tab of a pull request.
 
@@ -17,11 +17,11 @@ This activity shows how to use **GitHub Copilot Explain** to create a human read
 
 - Adding context or edits to improve the summary before submission.
 
-## Prerequisites
+### Prerequisites
 
 Ensure you have a GitHub repository in **Github Enterprise** where you can open pull requests. Push at least one commit and create a new PR that modifies multiple lines so the diff is non trivial. Make sure Copilot Explain for pull requests is enabled under repository Settings > Copilot.
 
-## Steps
+### Steps
 
 - **Step 1.** Navigate to your pull request on GitHub and click the **Files changed** tab.
 
@@ -35,7 +35,7 @@ Ensure you have a GitHub repository in **Github Enterprise** where you can open 
 
 - **Step 6.** Notify your reviewers that an AI generated summary is available to speed up review.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot Explain generate a clear summary without errors
 
@@ -52,7 +52,7 @@ Ensure you have a GitHub repository in **Github Enterprise** where you can open 
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot for pull requests](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-pull-request-summaries)
 

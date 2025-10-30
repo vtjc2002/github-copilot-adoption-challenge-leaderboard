@@ -3,11 +3,11 @@ Title: Ghost Text 101
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this micro-exercise you will practise Copilot’s “ghost text” inline completion on real code in your own repository. You will (a) finish a half-implemented function in your primary language, then (b) repeat the experiment in a different language file that already lives in the same repo, all in 15-20 minutes.
 
-## What you will learn
+### What you will learn
 
 - Triggering and accepting Copilot’s inline suggestions (“ghost text”).
 
@@ -17,11 +17,11 @@ In this micro-exercise you will practise Copilot’s “ghost text” inline com
 
 - Comparing Copilot behaviour across two different programming languages.
 
-## Prerequisites
+### Prerequisites
 
 Make sure GitHub Copilot is enabled in your IDE of choice (VS Code, JetBrains, Visual Studio, Neovim…). Open a repository you worked on recently, no starter project needed.
 
-## Step-by-step tutorial
+### Step-by-step tutorial
 
 - 1. Pick a partially written function
 Locate a function or method you began last week but never finished. Tip: search for “TODO” comments or empty method bodies. If you don’t have one, create a new function and leave it partly stubbed to simulate a work-in-progress.
@@ -45,36 +45,36 @@ Open a file in a different language that already exists in the repo (e.g., Pytho
 - 6. Commit your work
 Run tests or build as usual, then commit with a Copilot-generated commit message (optional).
 
-## Mini-quiz
+### Mini-quiz
 
-## Changed from mb-3 to mb-4 for more spacing
+### Changed from mb-3 to mb-4 for more spacing
 
 1. Did Copilot suggest a complete, runnable function body?
 
-## Added mb-2 for spacing between radio options
+### Added mb-2 for spacing between radio options
 
 - [ ] Yes
 - [ ] No
 
-## Changed from mb-3 to mb-4
+### Changed from mb-3 to mb-4
 
 2. Did you use the keyboard shortcut to cycle through alternative suggestions?
 
-## Added mb-2
+### Added mb-2
 
 - [ ] Yes
 - [ ] No
 
-## Changed from mb-4 to mb-5 for more spacing before next section
+### Changed from mb-4 to mb-5 for more spacing before next section
 
 3. Did you repeat the exercise in a second language file and notice any differences?
 
-## Added mb-2
+### Added mb-2
 
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot Quickstart docs](https://docs.github.com/en/copilot/getting-started-with-github-copilot)
 

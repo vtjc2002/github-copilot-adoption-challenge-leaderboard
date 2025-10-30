@@ -3,11 +3,11 @@ Title: Cross file rename
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this refactor exercise you will use **GitHub Copilot Chat** to rename every occurrence of the class `User` to `Member` across your repository. Copilot will propose bulk edits update imports and you will finish by running your build or test suite. Allocate around twenty minutes.
 
-## What you will learn
+### What you will learn
 
 - Prompting Copilot Chat for a project wide rename.
 
@@ -17,11 +17,11 @@ In this refactor exercise you will use **GitHub Copilot Chat** to rename every o
 
 - Committing refactor changes with confidence.
 
-## Before you start
+### Before you start
 
 Ensure Copilot Chat is enabled in **your IDE** for example VS Code JetBrains or Visual Studio. If you are using a compatible editor you may switch to EDIT mode. See references section below for instructions. Confirm your project builds cleanly and that you have a working test runner such as Jest PyTest JUnit or xUnit.
 
-## Steps
+### Steps
 
 - **Step 1.** Open any file that defines or references the class `User`.
 
@@ -37,7 +37,7 @@ Ensure Copilot Chat is enabled in **your IDE** for example VS Code JetBrains or 
 
 - **Step 7.** Commit the refactor with a message like `refactor: rename User to Member across codebase`. You may allow Copilot to draft the commit message at the prompt.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot list every file requiring a rename
 
@@ -54,7 +54,7 @@ Ensure Copilot Chat is enabled in **your IDE** for example VS Code JetBrains or 
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Copilot Edits VS 2022 overview](https://learn.microsoft.com/en-us/visualstudio/ide/copilot-edits)
 

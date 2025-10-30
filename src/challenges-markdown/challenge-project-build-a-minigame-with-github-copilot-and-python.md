@@ -3,11 +3,11 @@ Title: Challenge Project - Build a Minigame with GitHub Copilot and Python
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 Demonstrate your ability to analyze, create, and use different methods to develop a console minigame in Python with GitHub Codespaces and GitHub Copilot.
 
-## Learning Objectives
+### Learning Objectives
 
 - Experience GitHub Codespaces as a development environment.
 - Develop input and output routines in a Python console application.

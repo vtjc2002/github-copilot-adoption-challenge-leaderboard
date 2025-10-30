@@ -3,11 +3,11 @@ Title: GitHub Copilot Certification
 ActivityId: 11
 ---
 
-## Summary
+### Summary
 
 This certification validates your expertise with GitHub Copilot.
 
-## Skills Measured
+### Skills Measured
 
 - Responsible AI
 - GitHub Copilot plans and features

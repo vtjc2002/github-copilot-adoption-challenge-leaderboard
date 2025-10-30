@@ -3,11 +3,11 @@ Title: Management and Customization Considerations with GitHub Copilot
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 In this module, we explore management and customization considerations with GitHub Copilot.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you'll:
 

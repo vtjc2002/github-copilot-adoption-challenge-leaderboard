@@ -3,11 +3,11 @@ Title: Using GitHub Copilot with Python
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 GitHub Copilot is an AI pair programmer that offers autocomplete-style suggestions as you code in Python.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you're able to:
 

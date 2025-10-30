@@ -3,11 +3,11 @@ Title: Implement Code Improvements Using GitHub Copilot Tools
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 This module explores using GitHub Copilot Chat to develop improvements for an existing codebase. Exercises provide practical experience implementing GitHub Copilot suggestions that improve code quality, reliability, performance, and security.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of this module, you're able to:
 

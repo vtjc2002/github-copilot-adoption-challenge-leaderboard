@@ -3,11 +3,11 @@ Title: Building Applications with GitHub Copilot Agent Mode
 ActivityId: 10
 ---
 
-## Summary
+### Summary
 
 Learn how to build applications using GitHub Copilot Agent Mode by prompting autonomous development tasks, using documentation for guidance, and understanding how Agent Mode iteratively manages, refactors, and improves your codebase.
 
-## Learning Objectives
+### Learning Objectives
 
 In this module, you'll:
 

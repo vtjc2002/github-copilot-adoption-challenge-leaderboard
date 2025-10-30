@@ -3,11 +3,11 @@ Title: CLI : Explain a scary command
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this exercise you will use **GitHub Copilot CLI** to understand a complex shell command from your own project. You will ask Copilot to explain the command `git diff --name-only | head -n 1` through the `gh copilot explain` feature. Plan for about ten to fifteen minutes.
 
-## What you will learn
+### What you will learn
 
 - Installing and using the `gh copilot` extension.
 
@@ -17,11 +17,11 @@ In this exercise you will use **GitHub Copilot CLI** to understand a complex she
 
 - Applying the same method to any unfamiliar command in future.
 
-## Prerequisites
+### Prerequisites
 
 Confirm that the GitHub CLI is installed by running `gh --version`. Install the Copilot extension with `gh extension install github/gh-copilot` if it is not yet present. Authenticate with `gh auth login` and stay in the root folder of a repository you can modify.
 
-## Steps
+### Steps
 
 - **Step 1.** Open a terminal in the root folder of your project.
 
@@ -37,7 +37,7 @@ Confirm that the GitHub CLI is installed by running `gh --version`. Install the 
 
 - **Step 6.** Use `gh copilot explain` on a different command from your shell history to reinforce the technique.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot return an explanation that listed every flag and sub command
 
@@ -54,7 +54,7 @@ Confirm that the GitHub CLI is installed by running `gh --version`. Install the 
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [GitHub Copilot CLI project page](https://githubnext.com/projects/copilot-cli)
 

@@ -3,11 +3,11 @@ Title: Vision driven UX prototype
 ActivityId: 12
 ---
 
-## Summary
+### Summary
 
 In this rapid prototyping exercise, you will upload a photo of a hand-drawn or externally sourced wireframe into GitHub Copilot Chat Vision Preview and request Copilot to generate responsive HTML and CSS. Reserve twenty minutes for the full flow.
 
-## What you will learn
+### What you will learn
 
 - Adding image context to Copilot Chat Vision Preview.
 
@@ -17,11 +17,11 @@ In this rapid prototyping exercise, you will upload a photo of a hand-drawn or e
 
 - Launching a local preview to test responsiveness.
 
-## Before you start
+### Before you start
 
 Copilot Chat Vision Preview is available in **VS Code Nightly** with the Copilot extension enabled. Place a photo or scan of your wireframe in the repository for example `docs/wireframe.jpg`.
 
-## Steps
+### Steps
 
 - **Step 1.** Create a new branch called `vision-prototype` with `git checkout -b vision-prototype` or the source control panel.
 
@@ -37,7 +37,7 @@ Copilot Chat Vision Preview is available in **VS Code Nightly** with the Copilot
 
 - **Step 7.** Commit the prototype with a clear message and push the branch for review.
 
-## Checkpoint
+### Checkpoint
 
 1. Did Copilot generate HTML and CSS files in the `prototype/` folder
 
@@ -54,7 +54,7 @@ Copilot Chat Vision Preview is available in **VS Code Nightly** with the Copilot
 - [ ] Yes
 - [ ] No
 
-## Explore more
+### Explore more
 
 - [Vscode copilot vision](https://github.com/microsoft/vscode-copilot-vision)
 
