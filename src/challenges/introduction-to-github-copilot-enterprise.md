@@ -1,5 +1,0 @@
-﻿---
-Title: Introduction to GitHub Copilot Enterprise
-Source: insert.sql
----
-<!-- Summary --> <p style="font-size: 1.1rem; color: #333;"> Learn about the differences between GitHub Copilot for Enterprise, for Business, and for Individuals. Examine specific use cases, including how to enable and use GitHub Copilot Enterprise. </p> <!-- Learning Objectives --> <h5 class="mt-4" style="font-weight: 600;">Learning objectives</h5> <p>By the end of this module, you'll be able to:</p> <ul style="font-size: 1rem; line-height: 1.6;"> <li>Understand what the GitHub Copilot Enterprise plan is.</li> <li>Understand the differences between GitHub Copilot Enterprise versus Business versus Individual.</li> <li>Learn about specific use cases for GitHub Copilot Enterprise and hear how customers are enhancing their productivity.</li> <li>Review how to enable GitHub Copilot Enterprise.</li> </ul> <!-- CTA Button --> <div class="mt-4"> <a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot-enterprise/" target="_blank" class="btn btn-primary"> Go to Learning Module </a> </div>

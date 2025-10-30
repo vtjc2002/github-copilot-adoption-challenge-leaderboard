@@ -1,5 +1,0 @@
-﻿---
-Title: Get Started with GitHub Copilot
-Source: insert.sql
----
-<!-- Summary --> <p style="font-size: 1.1rem; color: #333;"> This module introduces developers to the GitHub Copilot products, the benefits that GitHub Copilot provides to developers, the GitHub Copilot and GitHub Copilot Chat product features, and the GitHub Copilot extensions for Visual Studio Code. </p> <!-- Learning Objectives --> <h5 class="mt-4" style="font-weight: 600;">Learning objectives</h5> <p>By the end of this module, you'll be able to:</p> <ul style="font-size: 1rem; line-height: 1.6;"> <li>Explain what GitHub Copilot is and the advantages it provides.</li> <li>Install the GitHub Copilot extensions for Visual Studio Code.</li> <li>Explain the features of the GitHub Copilot extensions for Visual Studio Code and how to use them.</li> <li>Configure the GitHub Copilot extensions for Visual Studio Code.</li> </ul> <!-- CTA Button --> <div class="mt-4"> <a href="https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/" target="_blank" class="btn btn-primary"> Go to Learning Module </a> </div>

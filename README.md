@@ -53,13 +53,16 @@ How to Evaluate & Examples:
 ---------------------------------------------------------->
 
 <!---- [TODO]  CONTENT GOES BELOW ------->
-1. Install Azure Developer CLI (azd): https://aka.ms/azd-install
-1. Install Azure CLI: https://aka.ms/azcli-install  
+1. Azure Developer CLI (azd): https://aka.ms/azd-install
+1. Azure CLI: https://aka.ms/azcli-install  
+1. dotnet 8 SDK: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+1. PowerShell 7.4 or higher: https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.4
+1. Python (only for challenges-util scripts): https://www.python.org/downloads/
 1. Have an Azure subscription
 
-For local development, you will also need:
+<!-- For local container development, you will also need:
 * [Docker or orchestration engine like Kubernetes to run the LeaderboardApp container](https://www.docker.com/)
-* [PostgresSQL running as a container](https://hub.docker.com/_/postgres)
+* [PostgresSQL running as a container](https://hub.docker.com/_/postgres) -->
 <!------====-- CONTENT GOES ABOVE ------->
 
 
@@ -75,7 +78,7 @@ How to Evaluate & Examples:
   - https://aka.ms/StartRight/README-Template/Instructions#installing
 
 <!---- [TODO]  CONTENT GOES BELOW ------->
-Deploy the entire application with a single command using Azure Developer CLI:
+Deploy the entire application with a few commands using Azure Developer CLI and PowerShell scripts:
 
 ```bash
 ## set the necessary environment variables first.  Make sure to replace the placeholders with your actual values.
@@ -91,12 +94,16 @@ pwsh ./src/infra/scripts/app-reg-setup.ps1 -passwordDaysToExpiration <number of 
 
 ```
 
-This will provision all Azure infrastructure (App Service, SQL Database, VNet, Key Vault) and deploy your application in one step.
+This will provision all Azure infrastructure (App Service, SQL Database, VNet, Key Vault) and deploy your application in one step. 
+
+_the script adds the ip address of your current machine to the sql server firewall rules so that the sql scripts can be executed successfully.  It also adds the ip address to the web app firewall rules.  Make sure to update your firewall rules accordingly after the deployment/setup._
 
 Use below command to get the web app URL after deployment:
 ```bash
 azd env get-value APP_SERVICE_HOST
 ```
+
+Now all you have to do is to review and [add challenges](./DEPLOYMENT.md#initialize-sample-challenges-optional)
 
 💻**Technical Overview**: See [TechnicalOverview.md](./TechnicalOverview.md) for architecture and component details.  Also app configuration settings.
 
@@ -109,45 +116,17 @@ azd env get-value APP_SERVICE_HOST
 - **Local development**: Use Docker and PostgreSQL (see prerequisites section)
 <!------====-- CONTENT GOES ABOVE ------->
 
+### Participant Challenges
+Read about the challenges participants can complete in
+[Participant Challenges Overview](./DEPLOYMENT.md#initialize-sample-challenges-optional)
+
 ### Understanding the Scoring System
 
-The Activities table defines how different GitHub Copilot activities contribute to team scores:
+Read about how the scoring system works and how to configure activity weights in
+[Activity Scoring Overview](./DEPLOYMENT.md#understanding-the-scoring-system)
 
-**Weight Types:**
-- **Multiplier**: Score = Activity count × Weight (e.g., 10 chats × 10.00 = 100 points)
-- **Fixed**: Score = Weight regardless of count (e.g., completing certification = 1000 points)
 
-**Scopes:**
-- **User**: Individual participant activity
-- **Team**: Aggregated team activity
 
-**Frequencies:**
-- **Daily**: Activity tracked and scored every day
-- **Once**: One-time achievement (e.g., certifications)
-
-**Default Weights (Customizable):**
-
-| Activity | Weight | Type | Why It Matters |
-|----------|--------|------|----------------|
-| ActiveUsersPerDay | 50.00 | Multiplier | Encourages daily engagement |
-| EngagedUsersPerDay | 75.00 | Multiplier | Rewards active participation |
-| TotalCodeSuggestions | 1.00 | Multiplier | Tracks basic usage |
-| TotalLinesAccepted | 1.50 | Multiplier | Rewards accepting suggestions |
-| TotalChats | 10.00 | Multiplier | Encourages using Chat features |
-| TotalChatInsertions | 50.00 | Multiplier | Rewards code insertions from Chat |
-| TotalChatCopyEvents | 30.00 | Multiplier | Tracks code copying from Chat |
-| TotalPRSummariesCreated | 100.00 | Multiplier | Encourages PR documentation |
-| TotalDotComChats | 20.00 | Multiplier | Rewards using GitHub.com Chat |
-| CompletedLearningModule | 250.00 | Fixed | Recognizes training completion |
-| GitHubCopilotCertificationExam | 1000.00 | Fixed | Highest reward for certification |
-| CopilotDailyChallengeCompleted | 200.00 | Fixed | Daily challenge incentive |
-| LinkClicked | 50.00 | Fixed | Engagement tracking |
-| TeamBonus | 50.00 | Fixed | Team collaboration bonus |
-
-> **💡 Customization Tip:** You can adjust these weights based on what's most important to your organization. For example:
-> - Increase `GitHubCopilotCertificationExam` to 2000 to emphasize certification
-> - Increase `TotalPRSummariesCreated` to encourage better documentation
-> - Adjust `TotalChats` vs `TotalCodeSuggestions` to prioritize different features
 
 <!-----------------------[  Deployment (CI/CD)  ]-----------<optional> section below--------------------->
 ### Deployment (CI/CD)
@@ -188,31 +167,6 @@ How to Evaluate & Examples:
 
 
 -----------------------------------------------
-
-
-<!-----------------------[  Contributing  ]-----------------<recommended> section below------------------>
-## Contributing
-
-<!--
-INSTRUCTIONS: 
-- Establish expectations and processes for existing & new developers to contribute to the repository.
-  - Describe whether first step should be email, teams message, issue, or direct to pull request.
-  - Express whether fork or branch preferred.
-- CONTRIBUTING content Location:
-  - You can tell users how to contribute in the README directly or link to a separate CONTRIBUTING.md file.
-  - The README sections "Contacts" and "Reuse Expectations" can be seen as subsections to CONTRIBUTING.
-  
-How to Evaluate & Examples:
-  - https://aka.ms/StartRight/README-Template/Instructions#contributing
--->
-
-<!---- [TODO]  CONTENT GOES BELOW ------->
-_This repository prefers outside contributors start forks rather than branches. For pull requests more complicated 
-than typos, it is often best to submit an issue first._
-
-<!------====-- CONTENT GOES ABOVE ------->
-
-
 <!-----------------------[  Limitations  ]----------------------<optional> section below----------------->
 
 
@@ -239,6 +193,31 @@ How to Evaluate & Examples:
  
 
 <!------====-- CONTENT GOES ABOVE ------->
+
+<!-----------------------[  Contributing  ]-----------------<recommended> section below------------------>
+## Contributing
+
+<!--
+INSTRUCTIONS: 
+- Establish expectations and processes for existing & new developers to contribute to the repository.
+  - Describe whether first step should be email, teams message, issue, or direct to pull request.
+  - Express whether fork or branch preferred.
+- CONTRIBUTING content Location:
+  - You can tell users how to contribute in the README directly or link to a separate CONTRIBUTING.md file.
+  - The README sections "Contacts" and "Reuse Expectations" can be seen as subsections to CONTRIBUTING.
+  
+How to Evaluate & Examples:
+  - https://aka.ms/StartRight/README-Template/Instructions#contributing
+-->
+
+<!---- [TODO]  CONTENT GOES BELOW ------->
+_This repository prefers outside contributors start forks rather than branches. For pull requests more complicated 
+than typos, it is often best to submit an issue first._
+
+<!------====-- CONTENT GOES ABOVE ------->
+
+
+
 
 --------------------------------------------
 

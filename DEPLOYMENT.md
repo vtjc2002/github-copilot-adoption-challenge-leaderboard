@@ -11,6 +11,7 @@ This guide will help you provision the Leaderboard App infrastructure and then d
 ## Quick Start (Recommended)
 
 ###  One-Command Deployment
+__This step is already completed by seed-database.ps1 as part of the README quick start.__
 
 The fastest and easiest way to get started:
 
@@ -80,7 +81,7 @@ azd provision
 
 ### Configure SQL Database Permissions (Required)
 
-The deployment now automates SQL permission setup for the App Service managed identity. Run the helper script before `azd up` to collect the necessary details from your current Azure CLI session.
+The deployment now automates SQL permission setup for the App Service managed identity. Run the helper script before `azd up` to collect the necessary details from your current Azure CLI session. __This step is already completed by seed-database.ps1 as part of the README quick start.__
 
 #### One-Time Setup Workflow
 
@@ -176,7 +177,7 @@ The app will then connect successfully through the private endpoint.
 
 ### Initialize Scoring System (Required)
 
-After granting SQL permissions and before using the application, you must initialize the Activities table with the default scoring system. This defines how different GitHub Copilot activities are weighted and scored.
+After granting SQL permissions and before using the application, you must initialize the Activities table with the default scoring system. This defines how different GitHub Copilot activities are weighted and scored. __This step is already completed by seed-database.ps1 as part of the README quick start.__
 
 > **⚠️ Important:** This is a one-time setup that must be done after the database is accessible but before challenges can be populated.
 
@@ -276,7 +277,7 @@ After initializing the scoring system, you can optionally add sample challenges 
 > **⚠️ Important:** You will need to customize these challenges based on what features are available in your environment. Some challenges may reference preview features or GitHub Copilot Enterprise capabilities that might not be enabled for your organization.
 
 **Before adding challenges:**
-- Review the available challenge types in the repository: `src/challenges/insert.sql`
+- Review the available challenge types in the [challenges markdown folder](./src/challenges-markdown/)
 - Identify which GitHub Copilot features are enabled for your organization
 - Remove or modify challenges that reference unavailable features
 - Consult with your GitHub Copilot administrator about feature availability
@@ -301,10 +302,11 @@ The full script includes challenges across multiple categories:
 
 **Option 1: Add Selected Challenges (Recommended)**
 
-1. Review the challenge script at `src/challenges/insert.sql`
-2. Identify 5-10 challenges that match your available features
-3. Copy only those INSERT statements
-4. Execute them in Query Editor as shown in the scoring system setup
+1. Review the challenge script at [challenges markdown folder](./src/challenges-markdown/)
+2. DELETE the challenge markdown file that you do NOT want to add. (don't worry, you can always undo file deletion via git)
+3. Run the follow python script ```./src/challenges-util/generate_sql_inserts.py``` to generate INSERT statements for only the remaining challenges.
+4. Copy [src/challenges-util/challenges-insert.sql](./src/challenges-util/challenges-insert.sql) and execute them in Query Editor as shown in the scoring system setup OR just run ``` ./src/infra/scripts/run-challenges-insert.ps1 ``` from your local repo to execute it automatically
+
 
 **Option 2: Add All Challenges (Requires Review)**
 
@@ -312,8 +314,8 @@ If you want to add all challenges initially and remove unavailable ones later:
 
 1. Go to Azure Portal → SQL Server → SQL databases → leaderboarddb
 2. Click **Query editor (preview)** and authenticate
-3. Open the full script from your local repository: `src/challenges/insert.sql`
-4. Copy and execute the INSERT statements
+3. Open the full script from your local repository: [src/challenges-util/challenges-insert.sql](./src/challenges-util/challenges-insert.sql)
+4. Copy and execute the INSERT statements OR just run ``` ./src/infra/scripts/run-challenges-insert.ps1 ``` from your local repo to execute it automatically
 5. Review the challenges in the application and deactivate any that aren't applicable
 
 **Example - Adding Just 3 Starter Challenges:**
@@ -326,7 +328,7 @@ INSERT INTO [dbo].[Challenges] (Title, Content, PostedDate, ActivityId) VALUES
 ```
 
 > **📋 Customization Plan:** We recommend scheduling time with your team to:
-> 1. Walk through all available challenges in `insert.sql`
+> 1. Walk through all available challenges in [src/challenges-util/challenges-insert.sql](./src/challenges-util/challenges-insert.sql)
 > 2. Test each challenge type in your environment
 > 3. Create a custom script with only applicable challenges
 > 4. Document which features are available for your organization
@@ -348,7 +350,7 @@ INSERT INTO [dbo].[Challenges] (Title, Content, PostedDate, ActivityId) VALUES
 
 ### Configure Azure AD Authentication (Required)
 
-After configuring SQL permissions, you must set up Azure AD authentication to enable user sign-in for the application.
+After configuring SQL permissions, you must set up Azure AD authentication to enable user sign-in for the application.  __This step is already completed by app-reg-setup.ps1 as part of the README quick start.__
 
 > **⚠️ Important:** The application uses Microsoft Entra ID (Azure AD) for authentication. You must register an App Registration and configure the App Service with the ClientId, TenantId, and ClientSecret.
 

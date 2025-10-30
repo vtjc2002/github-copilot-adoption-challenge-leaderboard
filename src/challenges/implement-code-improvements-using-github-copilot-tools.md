@@ -1,5 +1,0 @@
-﻿---
-Title: Implement Code Improvements Using GitHub Copilot Tools
-Source: insert.sql
----
-<!-- Summary --> <p style="font-size: 1.1rem; color: #333;"> This module explores using GitHub Copilot Chat to develop improvements for an existing codebase. Exercises provide practical experience implementing GitHub Copilot suggestions that improve code quality, reliability, performance, and security. </p> <!-- Learning Objectives --> <h5 class="mt-4" style="font-weight: 600;">Learning objectives</h5> <p>By the end of this module, you're able to:</p> <ul style="font-size: 1rem; line-height: 1.6;"> <li>Develop prompts/questions for GitHub Copilot Chat that help you to improve the code in your existing code projects.</li> <li>Implement code update suggestions from GitHub Copilot Chat that improve existing code in the areas of code quality, reliability, performance, and security.</li> </ul> <!-- CTA Button --> <div class="mt-4"> <a href="https://learn.microsoft.com/en-us/training/modules/implement-code-improvements-using-github-copilot-tools/" target="_blank" class="btn btn-primary"> Go to Learning Module </a> </div>
