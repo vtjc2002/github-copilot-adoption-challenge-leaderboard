@@ -82,6 +82,7 @@ Deploy the entire application with a few commands using Azure Developer CLI and 
 
 ```bash
 ## set the necessary environment variables first.  Make sure to replace the placeholders with your actual values.
+## for <env-name> use a 5 letter unique env-name like iu87w
 pwsh ./setup-azd.ps1 -TenantId <tenant-id> -SubscriptionId <subscription-id> -Location <azure-region> -EnvironmentName <env-name>
 ## run azd up to deploy the infra and app
 azd up
