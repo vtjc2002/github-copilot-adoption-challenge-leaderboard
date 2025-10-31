@@ -303,10 +303,18 @@ The full script includes challenges across multiple categories:
 **Option 1: Add Selected Challenges (Recommended)**
 
 1. Review the challenge script at [challenges markdown folder](./src/challenges-markdown/)
-2. DELETE the challenge markdown file that you do NOT want to add. (don't worry, you can always undo file deletion via git)
-3. Run the follow python script ```./src/challenges-util/generate_sql_inserts.py``` to generate INSERT statements for only the remaining challenges.
-4. Copy [src/challenges-util/challenges-insert.sql](./src/challenges-util/challenges-insert.sql) and execute them in Query Editor as shown in the scoring system setup OR just run ``` ./src/infra/scripts/run-challenges-insert.ps1 ``` from your local repo to execute it automatically
-
+2. DELETE the challenge markdown file that you do NOT want to add. (don't worry, you can always undo file deletion via git) and INSERT the challenges into the DB either using Option a) or b) below
+   
+   a. [**Automatic** - INSERT using Python script] Run the follow python script ```./src/challenges-util/generate_sql_inserts.py``` to generate INSERT statements for only the remaining challenges. Create a virtual environment to install the required packages.
+   
+   ```bash
+   python3 -m venv ghcp
+   source ghcp/bin/activate
+   pip install markdown
+   python ./src/challenges-util/generate_sql_inserts.py
+   ```
+   
+   b. [**Manual**  - INSERT using DB Query Editor] Copy the content in [src/challenges-util/challenges-insert.sql](./src/challenges-util/challenges-insert.sql) and execute them in Query Editor as shown in the scoring system setup OR just run ``` ./src/infra/scripts/run-challenges-insert.ps1 ``` from your local repo to execute it automatically
 
 **Option 2: Add All Challenges (Requires Review)**
 
